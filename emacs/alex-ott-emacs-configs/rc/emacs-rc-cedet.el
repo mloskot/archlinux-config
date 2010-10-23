@@ -11,7 +11,7 @@
 ;; Author: mateusz at loskot dot net
 ;; Source: http://github.com/mloskot/dot
 
-(load-file "~/emacs/cedet/common/cedet.el")
+(load-file "~/dot/emacs/cedet/common/cedet.el")
 
 (semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
@@ -49,8 +49,8 @@
   (local-set-key "\C-cj" 'semantic-ia-fast-jump)
   (local-set-key "\C-cq" 'semantic-ia-show-doc)
   (local-set-key "\C-cs" 'semantic-ia-show-summary)
-  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle)
-  )
+  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
+
 ;; (add-hook 'semantic-init-hooks 'alexott/cedet-hook)
 (add-hook 'c-mode-common-hook 'alexott/cedet-hook)
 (add-hook 'lisp-mode-hook 'alexott/cedet-hook)
@@ -64,68 +64,52 @@
   (local-set-key "\C-ct" 'eassist-switch-h-cpp)
   (local-set-key "\C-xt" 'eassist-switch-h-cpp)
   (local-set-key "\C-ce" 'eassist-list-methods)
-  (local-set-key "\C-c\C-r" 'semantic-symref)
-  )
+  (local-set-key "\C-c\C-r" 'semantic-symref))
+
 (add-hook 'c-mode-common-hook 'alexott/c-mode-cedet-hook)
 
 ;; hooks, specific for semantic
 (defun alexott/semantic-hook ()
-;; (semantic-tag-folding-mode 1)
-  (imenu-add-to-menubar "TAGS")
- )
+  ;(semantic-tag-folding-mode 1)
+  (imenu-add-to-menubar "TAGS"))
+
 (add-hook 'semantic-init-hooks 'alexott/semantic-hook)
 
 (custom-set-variables
  '(semantic-idle-scheduler-idle-time 3)
  '(semantic-self-insert-show-completion-function (lambda nil (semantic-ia-complete-symbol-menu (point))))
  '(global-semantic-tag-folding-mode t nil (semantic-util-modes)))
-(global-semantic-folding-mode 1)
+
+;(global-semantic-folding-mode 1) ; FIXME
 
 ;; gnu global support
-(require 'semanticdb-global)
-(semanticdb-enable-gnu-global-databases 'c-mode)
-(semanticdb-enable-gnu-global-databases 'c++-mode)
+;(require 'semanticdb-global)
+;(semanticdb-enable-gnu-global-databases 'c-mode)
+;(semanticdb-enable-gnu-global-databases 'c++-mode)
 
 ;; ctags
 (require 'semanticdb-ectag)
 (semantic-load-enable-primary-exuberent-ctags-support)
 
 ;; c/c++ include paths
-;(semantic-add-system-include "~/exp/include" 'c++-mode)
-;(semantic-add-system-include "~/exp/include" 'c-mode)
-
+;;
 ;; boost from debian/ubuntu package (1.42)
-;(setq boost-base-directory "/usr/include/")
-
+(setq boost-base-directory "/usr/include/")
 ;; boost svn turnk
-(setq boost-base-directory "~/dev/boost/_svn/trunk/")
+;(setq boost-base-directory "~/dev/boost/_svn/trunk/")
+
+(semantic-add-system-include
+  (concat boost-base-directory "boost") 'c++-mode)
 
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file
              (concat boost-base-directory "/boost/config.hpp"))
 
-;;(semantic-add-system-include "/usr/include/boost" 'c++-mode)
-;;(semantic-add-system-include "~/dev/boost/_svn/trunk/boost" 'c++-mode)
-
 ;;
-(global-semantic-idle-tag-highlight-mode 1)
+;(global-semantic-idle-tag-highlight-mode 1) ; FIXME
 
 ;;; ede customization
 (require 'semantic-lex-spp)
 (global-ede-mode t)
-
-;; cpp-tests project definition
-(setq cpp-tests-project
-
-;; my functions for EDE
-(defun alexott/ede-get-local-var (fname var)
-  "fetch given variable var from :local-variables of project of file fname"
-  (let* ((current-dir (file-name-directory fname))
-         (prj (ede-current-project current-dir)))
-    (when prj
-      (let* ((ov (oref prj local-variables))
-            (lst (assoc var ov)))
-        (when lst
-          (cdr lst))))))
 
 ;; setup compile package
 ;; TODO: allow to specify function as compile-command
@@ -173,3 +157,4 @@
 ;;    (concat "cd " root-dir "Debug/" subdir "; make -j3")))
 
 ;;; emacs-rc-cedet.el ends here
+
