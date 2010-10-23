@@ -42,7 +42,7 @@
 ;; 
 ;;  cycle through buffers with Ctrl-Tab (like Firefox)
 ;;  source: http://emacs-fu.blogspot.com/2008/12/cycling-through-your-buffers-with-ctrl.html
-(global-set-key (kbd "<C-tab>") 'bury-buffer)
+;;(global-set-key (kbd "<C-tab>") 'bury-buffer)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; editor settings
@@ -75,12 +75,48 @@
 
 ;;  quickly switching between header and implementation
 ;;  source: http://emacs-fu.blogspot.com/2008/12/quickly-switching-between-header-and.html 
-(add-hook 'c-mode-common-hook
-    (lambda() 
-        (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
+;;(add-hook 'c-mode-common-hook
+;;    (lambda() 
+;;        (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacs-starter-kit
 (load-file "~/dot/emacs/emacs-starter-kit/init.el")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; cedet
+;; TODO: exctract to separate .el file
+(load-file "~/dot/emacs/cedet/common/cedet.el")
+(global-ede-mode 1)                      ; enable the Project management system
+(global-srecode-minor-mode 1)            ; enable template ins
+
+;; enables senator-minor-mode for navigation in buffer,
+;; semantic-mru-bookmark-mode for storing positions of visited tags, and
+;; semantic-idle-summary-mode, that shows information about tag under point
+;(semantic-load-enable-code-helpers)
+
+;; enables which-func-mode, that shows name of current function in status line
+(semantic-load-enable-excessive-code-helpers)
+
+
+(require 'semantic-ia)
+(require 'semantic-gcc)
+;; Boost 1.42
+(semantic-add-system-include "/usr/include/boost" 'c++-mode)
+;; Boost (current SVN trunk)
+;;(semantic-add-system-include "~/dev/boost/_svn/trunk/boost" 'c++-mode)
+
+;; Semantic bindings
+(defun my-cedet-hook ()
+  (local-set-key [(control return)] 'semantic-ia-complete-symbol)
+  (local-set-key "\C-c?" 'semantic-ia-complete-symbol-menu)
+  (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
+  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
+(add-hook 'c-mode-common-hook 'my-cedet-hook)
+
+(defun my-c-mode-cedet-hook ()
+  (local-set-key "." 'semantic-complete-self-insert)
+  (local-set-key ">" 'semantic-complete-self-insert))
+(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
 ;; EOF
