@@ -1,0 +1,13 @@
+# dot/emacs module
+
+=== .emacs ===
+
+This is my main Emacs configuration symlinked to $HOME/.emacs
+
+=== emacs-starter-kit ===
+
+This is placeholder for clone of the Emacs Starter Kit:
+
+git clone http://github.com/technomancy/emacs-starter-kit.git $HOME/dot/emacs/
+
+The $HOME/.emacs loads it by $HOME/dot/emacs/emacs-starter-kit/init.el
