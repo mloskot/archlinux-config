@@ -6,4 +6,14 @@ My main Emacs configuration symlinked to $HOME/.emacs
 
 === emacs-starter-kit ===
 
-Placeholder for clone of the Emacs Starter Kit, see emacs-starter-kit/README
+This is placeholder for clone of the Emacs Starter Kit.
+
+1. Clone the kit somewhere on your disk
+
+git clone http://github.com/technomancy/emacs-starter-kit.git
+
+2. Copy all files to the dot tree
+
+cp emacs-starter-kit/* $HOME/dot/emacs/emacs-starter-kit
+
+The $HOME/.emacs loads it by $HOME/dot/emacs/emacs-starter-kit/init.el
