@@ -102,6 +102,10 @@
 
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file
              (concat boost-base-directory "/boost/config.hpp"))
+
+;;(semantic-add-system-include "/usr/include/boost" 'c++-mode)
+;;(semantic-add-system-include "~/dev/boost/_svn/trunk/boost" 'c++-mode)
+
 ;;
 (global-semantic-idle-tag-highlight-mode 1)
 
@@ -169,4 +173,3 @@
 ;;    (concat "cd " root-dir "Debug/" subdir "; make -j3")))
 
 ;;; emacs-rc-cedet.el ends here
-
