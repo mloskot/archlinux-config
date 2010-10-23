@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/mloskot/dev/boost/_svn/sandbox/geometry/boost/geometry/algorithms'
+let g:netrw_dirhist_2='/home/mloskot/dev/boost/_svn/sandbox/geometry/boost/geometry/algorithms/overlay'
+let g:netrw_dirhist_3='/home/mloskot/dev/boost/_svn/sandbox/geometry/boost/geometry/algorithms'
+let g:netrw_dirhist_4='/home/mloskot/dev/boost/_svn/sandbox/geometry/boost/geometry/algorithms/detail'
+let g:netrw_dirhist_5='/home/mloskot/dev/soci/_git/master/src/cmake'
+let g:netrw_dirhist_6='/home/mloskot/dev/soci/_git/master/src'
+let g:netrw_dirhist_7='/home/mloskot/dev/soci/_git/master/src/core'
+let g:netrw_dirhist_8='.'
