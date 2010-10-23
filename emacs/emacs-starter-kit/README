@@ -1,8 +1,13 @@
 # dot/emacs/emacs-starter-kit
 
-This is placeholder for clone of the Emacs Starter Kit:
+This is placeholder for clone of the Emacs Starter Kit.
 
-cd dot/emacs/emacs-starter-kit
-git clone http://github.com/technomancy/emacs-starter-kit.git .
+1. Clone the kit somewhere on your disk
+
+git clone http://github.com/technomancy/emacs-starter-kit.git
+
+2. Copy all files to the dot tree
+
+cp emacs-starter-kit/* $HOME/dot/emacs/emacs-starter-kit
 
 The $HOME/.emacs loads it by $HOME/dot/emacs/emacs-starter-kit/init.el
