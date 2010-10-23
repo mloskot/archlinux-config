@@ -1,0 +1,5 @@
+# ~/.androidrc
+
+# set Eclipse/Android environment
+ANDROID_SDK_STARTER=/opt/google/android/android-sdk-linux_x86
+export PATH=${PATH}:${ANDROID_SDK_STARTER}/tools
