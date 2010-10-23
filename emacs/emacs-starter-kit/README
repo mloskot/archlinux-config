@@ -1,0 +1,8 @@
+# dot/emacs/emacs-starter-kit
+
+This is placeholder for clone of the Emacs Starter Kit:
+
+cd dot/emacs/emacs-starter-kit
+git clone http://github.com/technomancy/emacs-starter-kit.git .
+
+The $HOME/.emacs loads it by $HOME/dot/emacs/emacs-starter-kit/init.el
