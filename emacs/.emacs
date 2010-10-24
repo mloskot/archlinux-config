@@ -7,7 +7,7 @@
 (setq custom-file "~/.emacs.d/custom.el")
 
 ;; emacs-starter-kit
-(load-file "~/dot/emacs/emacs-starter-kit/init.el")
+;(load-file "~/dot/emacs/emacs-starter-kit/init.el")
 
 ;; PATH environment
 (when (string= (system-name) "dog")
@@ -27,6 +27,7 @@
 
 ;; programming tools & languages
 (load "~/dot/emacs/alex-ott-emacs-configs/rc/emacs-rc-cedet.el")
+(load "~/dot/emacs/alex-ott-emacs-configs/rc/emacs-rc-cmake.el")
 
 ;; VCS & DVCS
 ;(load "~/dot/emacs/alex-ott-emacs-configs/rc/emacs-rc-git.el")

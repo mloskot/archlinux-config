@@ -21,6 +21,9 @@
 (global-srecode-minor-mode 1)
 (global-semantic-mru-bookmark-mode 1)
 
+;; enable new ede-generic project (cedet 1.0+)
+(ede-enable-generic-projects)
+
 (require 'semantic-decorate-include)
 
 ;; gcc setup
