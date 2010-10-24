@@ -17,3 +17,18 @@ git clone http://github.com/technomancy/emacs-starter-kit.git
 cp emacs-starter-kit/* $HOME/dot/emacs/emacs-starter-kit
 
 The $HOME/.emacs loads it by $HOME/dot/emacs/emacs-starter-kit/init.el
+
+=== alex-ott-emacs-configs ==
+
+Placeholder for my customised version of some ofAlex Ott's emacs
+configuration files:
+
+http://github.com/alexott/emacs-configs
+
+=== cedet ===
+
+Placeholder for CEDET installation.
+
+=== my-ede-projects ===
+
+My ede-cpp-root-projcet definitions
