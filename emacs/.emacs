@@ -29,6 +29,9 @@
 (load "~/dot/emacs/alex-ott-emacs-configs/rc/emacs-rc-cedet.el")
 (load "~/dot/emacs/alex-ott-emacs-configs/rc/emacs-rc-cmake.el")
 
+;; programming projects
+(load "~/dot/emacs/my-ede-projects/liblas.el")
+
 ;; VCS & DVCS
 ;(load "~/dot/emacs/alex-ott-emacs-configs/rc/emacs-rc-git.el")
 
