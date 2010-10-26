@@ -31,7 +31,7 @@
 ;; 
 ;;  cycle through buffers with Ctrl-Tab (like Firefox)
 ;;  source: http://emacs-fu.blogspot.com/2008/12/cycling-through-your-buffers-with-ctrl.html
-;;(global-set-key (kbd "<C-tab>") 'bury-buffer)
+(global-set-key (kbd "<C-tab>") 'bury-buffer)
  
 ;; editor settings
 (setq scroll-step 1)                    ;; line by line scrolling
