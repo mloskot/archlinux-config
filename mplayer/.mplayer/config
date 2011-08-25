@@ -1,0 +1,29 @@
+[default]
+# Write your default config options here!
+
+#===========
+# Appearance
+#===========
+
+# Disable screensaver.
+stop-xscreensaver=yes
+
+# Position window. (50%:50%: center of screen)
+#geometry=50%:50%:
+geometry=+400+0
+
+# double size
+xy=1.5
+
+#always keep mplayer on top
+ontop="1"
+
+#======
+# Video
+#======
+
+# Set video driver.
+vo=xv
+
+# Use double-buffering. (Recommended for xv with SUB/OSD usage)
+double=yes

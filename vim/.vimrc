@@ -60,7 +60,8 @@ set nobackup		" do not keep a backup file, use versions instead
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 "set cmdheight=2
-set foldmethod=syntax
+"set foldmethod=syntax
+set foldmethod=indent
 
 " Indentation settings
 set shiftwidth=4
@@ -73,12 +74,16 @@ set expandtab
 set nowrap
 
 "set nocp		" do not use omnicomplete
-
+"
+"
+" jQuery settings
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+"
 " CMake settings
 :autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt,*.cmake.in runtime! indent/cmake.vim 
 :autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt,*.cmake.in setf cmake
 :autocmd BufRead,BufNewFile *.ctest,*.ctest.in setf cmake
-
+"
 " Pascal Settings
 au BufRead,BufNewFile *.PAS set filetype=pascal
 
