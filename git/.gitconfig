@@ -1,3 +1,7 @@
 [user]
 	name = Mateusz Loskot
 	email = mateusz@loskot.net
+[color]
+	branch = auto
+	diff = auto
+	status = auto
