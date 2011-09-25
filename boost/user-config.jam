@@ -38,6 +38,23 @@ use-project boost : /home/mloskot/dev/boost/_svn/trunk ;
 #use-project boost : /home/mloskot/dev/gil/_svn_review/trunk ;
 
 # ------------------
+# clang configuration.
+# ------------------
+
+using clang
+    : # version
+    3.0
+    : # compiler
+    /usr/local/bin/clang++
+    : # options
+    <cxxflags>-fPIC
+    <cxxflags>-Wno-mismatched-tags
+    <cxxflags>-Wno-unused-variable
+    # Workaround
+    <cxxflags>-I/usr/include/x86_64-linux-gnu
+    ;
+
+# ------------------
 # GCC configuration.
 # ------------------
 
@@ -68,6 +85,18 @@ use-project boost : /home/mloskot/dev/boost/_svn/trunk ;
 
 # Configure with an explicit installation prefix.
 # using qt : /usr/opt/qt ;
+
+# ---------------------
+# Python configuration.
+# ---------------------
+
+# Configure specific Python version.
+using python
+    : 3.2
+    : /usr/bin/python3
+    : /usr/include/python3.2
+    : /usr/lib
+    ;
 
 # ------------------------
 # BoostBook configuration.
