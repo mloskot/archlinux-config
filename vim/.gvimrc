@@ -26,6 +26,7 @@ set vb t_vb="<ESC>|30f"
 
 " Hide toolbar
 set guioptions-=T
+set guioptions+=m
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
