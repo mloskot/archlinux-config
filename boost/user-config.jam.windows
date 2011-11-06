@@ -1,5 +1,5 @@
 # Copyright 2011 Mateusz Loskot
-# Boost.Build configuration for Linux machine
+# Boost.Build configuration for Windows machine
 
 # Copyright 2003, 2005 Douglas Gregor
 # Copyright 2004 John Maddock
@@ -11,7 +11,7 @@
 # this file in place, or you can place it in a permanent location so that it
 # does not get overwritten should you get a new version of Boost.Build. See:
 #
-#   http://boost.org/boost-build2/doc/html/bbv2/reference.html#bbv2.reference.init
+#   http://www.boost.org/boost-build2/doc/html/bbv2/overview/configuration.html
 #
 # for documentation about possible permanent locations.
 
@@ -37,35 +37,16 @@
 #   http://boost.org/boost-build2/doc/html/bbv2/advanced.html#bbv2.advanced.jam_language
 #
 
-use-project boost : /home/mloskot/dev/boost/_svn/trunk ;
-#use-project boost : /home/mloskot/dev/gil/_svn_review/trunk ;
+# -------------------
+# MSVC configuration.
+# -------------------
 
-# ------------------
-# clang configuration.
-# ------------------
+# Configure msvc (default version, searched for in standard locations and PATH).
+# using msvc ;
 
-using clang
-    : # version
-    3.0
-    : # compiler
-    /usr/local/bin/clang++
-    : # options
-    <cxxflags>-fPIC
-    <cxxflags>-Wno-mismatched-tags
-    <cxxflags>-Wno-unused-variable
-    # Workaround
-    <cxxflags>-I/usr/include/x86_64-linux-gnu
-    ;
-
-# ------------------
-# GCC configuration.
-# ------------------
-
-# Configure gcc (default version).
-#using gcc ;
-
-# Configure specific gcc version, giving alternative name to use.
-# using gcc : 3.2 : g++-3.2 ;
+# Configure specific msvc version (searched for in standard locations and PATH).
+# Visual Studio 11 Developer Preview
+using msvc : 11.0 ;
 
 # -----------------
 # QT configuration.
@@ -82,33 +63,4 @@ using clang
 # ---------------------
 
 # Configure specific Python version.
-using python
-    : 3.2
-    : /usr/bin/python3
-    : /usr/include/python3.2
-    : /usr/lib
-    ;
-
-# ------------------------
-# BoostBook configuration.
-# ------------------------
-using xsltproc ;
-
-using boostbook
-    : /usr/share/xml/docbook/stylesheet/nwalsh
-    : /usr/share/xml/docbook/schema/dtd/4.2
-    ;
-
-using fop
-    : /usr/bin/fop
-    : /usr/lib/jvm/java-6-openjdk
-    ;
-
-using doxygen ;
-
-# ------------------------
-# Quickbook configuration.
-# ------------------------
-using quickbook 
-    : /home/mloskot/bin/quickbook 
-    ;
+using python : 3.2 : C:\\Python32 ;
