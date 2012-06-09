@@ -21,7 +21,7 @@ if has("syntax") && (&t_Co > 2 || has("gui_running"))
   set hlsearch
 endif
 
-" Turn of beep
+" Turn off beep
 set vb t_vb="<ESC>|30f"
 
 " Hide toolbar
