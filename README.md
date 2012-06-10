@@ -1,5 +1,7 @@
-Arch Linux by mloskot
-=====================
+Arch Linux Setup
+================
+
+URL: https://github.com/mloskot/archlinux-config
 
 Collection of system configuration files and user-specific
 dotfiles for Arch Linux installation.
@@ -39,4 +41,4 @@ Review the log genererated to `stdout`.
 Author
 ------
 
-Mateusz Loskot <mateusz at loskot dot net>
+Mateusz Loskot (mateusz at loskot dot net)
