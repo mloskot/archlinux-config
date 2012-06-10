@@ -30,13 +30,14 @@ Deployment
 
 ### User-specific configuration:
 
-Typically, clone the project into `$HOME/.dotfiles`.
-Inspect header of `$HOME/.dotfiles/deploy-mloskot.sh` script for configuration options.
+* Clone the project, typically into `$HOME/.dotfiles`.
+* Inspect header of `$HOME/.dotfiles/deploy-mloskot.sh` script for configuration options.
+* Deploy:
 
     $ cd $HOME/.dotfiles
     $ ./deploy-mloskot.sh
 
-Review the log genererated to `stdout`.
+* Review the log genererated to `stdout`.
 
 Author
 ------
