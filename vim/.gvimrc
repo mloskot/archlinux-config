@@ -12,7 +12,7 @@
 " colorscheme or running 'gvim -reverse'.
 " http://www.cs.cmu.edu/~maverick/VimColorSchemeTest/ has examples and
 " downloads for the colorschemes on vim.org
-set noanti gfn=Terminus
+"set noanti gfn=Terminus
 set enc=utf-8
 
 " Also switch on highlighting the last used search pattern.
