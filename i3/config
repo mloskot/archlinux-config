@@ -31,9 +31,9 @@ default_orientation horizontal
 # font for window titles. ISO 10646 = Unicode
 # i3 uses X core fonts (not Xft) for rendering window titles.
 # default:
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Terminus:
-font -*-terminus-medium-r-normal-*-14-140-72-72-C-80-iso10646-1
+#font -*-terminus-medium-r-normal-*-14-140-72-72-C-80-iso10646-1
 
 # Colors which i3 uses to draw the window decorations
 # Default:
@@ -173,15 +173,16 @@ bindsym $mod+r mode "resize"
 # }}}
 
 # {{{ automatically putting clients on specific workspaces
-assign [class="Google-chrome"] 4
-assign [class="Pidgin"] 5
-assign [class="Skype"] 5
+assign [class="Firefox"] 1
+assign [class="Chromium"] 1
+assign [class="Pidgin"] 1
+assign [class="Skype"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
-exec google-chrome
-#exec google-chrome
-#exec google-chrome --app=https://mail.google.com/mail/u/0
+exec volumeicon -b
+#exec pidgin
+#exec chromium
 #exec dropboxd
 #exec parcellite
 # }}}
