@@ -16,17 +16,17 @@ Purpose: common applications, internet, software development
 Directories
 -----------
 
-/etc          - system-wide configuration
-/home/mloskot - user-specific dotfiles dedicated for mloskot user
+* /etc          - system-wide configuration
+* /home/mloskot - user-specific dotfiles dedicated for mloskot user
 
 Deployment
 ----------
 
-* System-wide configuration:
+### System-wide configuration:
 
 *TODO*
 
-* User-specific configuration:
+### User-specific configuration:
 
 Typically, clone the project into `$HOME/.dotfiles`.
 Inspect header of `$HOME/.dotfiles/deploy-mloskot.sh` script for configuration options.
