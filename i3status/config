@@ -1,3 +1,9 @@
+# i3status config file (v4) - ~/.config/i3status/config or ~/.i3status.conf
+#
+# Please see http://i3wm.org/i3status/manpage.html for a complete reference!
+#
+# Author: Mateusz Loskot <mateusz@loskot.net>
+#
 general {
         colors = true
         interval = 5
