@@ -18,8 +18,8 @@ Purpose: common applications, internet, software development
 Directories
 -----------
 
-* /etc          - system-wide configuration
-* /home/mloskot - user-specific dotfiles dedicated for mloskot user
+* `/etc`          - system-wide configuration
+* `/home/mloskot` - user-specific dotfiles dedicated for mloskot user
 
 Deployment
 ----------
@@ -33,10 +33,10 @@ Deployment
 * Clone the project, typically into `$HOME/.dotfiles`.
 * Inspect header of `$HOME/.dotfiles/deploy-mloskot.sh` script for configuration options.
 * Deploy:
-
+```
     $ cd $HOME/.dotfiles
     $ ./deploy-mloskot.sh
-
+```
 * Review the log genererated to `stdout`.
 
 Author
