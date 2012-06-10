@@ -1,3 +1,14 @@
+#
+# ~/.bash_aliases
+#
+# Mateusz Loskot <mateusz@loskot.net>
+#
+
+# Skype
+alias skype='LD_PRELOAD=/usr/libxx/libv4l/v4l1compat.so skype'
+
+# Bash Batch Image Processing Scripts 
+# http://sourceforge.net/projects/bbips/
 alias bbapcom='bash ~/.bbips/bbapcom'
 alias bbatxt='bash ~/.bbips/bbatxt'
 alias bbborder='bash ~/.bbips/bbborder'
