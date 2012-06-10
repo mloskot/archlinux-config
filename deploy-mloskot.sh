@@ -16,7 +16,7 @@ function make_symlink()
 {
     T=${1}
     L=${2}
-    if [ ! -f "${T}" ]; then
+    if [ ! -f "${T}" -a ! -d "${T}" ]; then
         echo "Target ${T} does not exist - skipping"
         return 1
     fi
