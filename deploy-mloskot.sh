@@ -72,6 +72,8 @@ fi
 
 echo "Deploying dotfiles from ${DOTFILES} to ${HOME}"
 echo
+# ~/bin
+deploy_file bin
 # Bash
 deploy_file .profile
 deploy_file .bash_aliases
