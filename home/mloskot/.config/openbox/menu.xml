@@ -71,6 +71,11 @@
 		</item>
 	</menu>
 	<menu id="apps-term-menu" label="Terminals">
+		<item label="urxvt">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
 		<item label="Terminator">
 			<action name="Execute">
 				<execute>terminator</execute>
