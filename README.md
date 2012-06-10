@@ -33,7 +33,8 @@ Deployment
 * Clone the project, typically into `$HOME/.dotfiles`.
 * Inspect header of `$HOME/.dotfiles/deploy-mloskot.sh` script for configuration options.
 * Deploy:
-```
+
+```shell
     $ cd $HOME/.dotfiles
     $ ./deploy-mloskot.sh
 ```
