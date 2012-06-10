@@ -1,6 +1,7 @@
 #
 # ~/.bash_aliases
 #
+# Part of https://github.com/mloskot/archlinux-config
 # Mateusz Loskot <mateusz@loskot.net>
 #
 
