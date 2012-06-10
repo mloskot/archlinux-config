@@ -16,12 +16,12 @@ xset -dpms
 xset s off
 
 # Make the beep quieter, shorter, and a nicer pitch. I tend to set 440 Hz, 50ms
-xset b 50 440 50
+#xset b 50 440 50
 # Disable bell
 #xset -b
 
 # Enable zapping (C-A-<Bksp> kills X)
-setxkbmap -option terminate:ctrl_alt_bksp
+#setxkbmap -option terminate:ctrl_alt_bksp
 
 # Enforce correct locales from the beginning
 unset LC_COLLATE
@@ -46,8 +46,13 @@ xsetroot -solid "#333333"
 # Enable core dumps in case something goes wrong
 ulimit -c unlimited
 
+#xcompmgr &
+
 # Start i3 and log
 I3_CONFIG_HOME=${HOME}/.config/i3
-echo "Starting at $(date)" > ${I3_CONFIG_HOME}/logfile
-#exec /usr/bin/i3 -V -d all >> ${I3_CONFIG_HOME}/logfile
-exec ck-launch-session dbus-launch /usr/bin/i3 -V >> ${I3_CONFIG_HOME}/logfile
+LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
+echo "Starting at $(date)" > ${LOGFILE}
+#exec /usr/bin/i3 -V -d all >> ${LOGFILE}
+exec ck-launch-session dbus-launch --auto-syntax --exit-with-session i3 -V -d all >> ${LOGFILE} 2>&1
+#exec /usr/bin/i3 >> ${LOGFILE}
+#exec ck-launch-session dbus-launch /usr/bin/i3 -V >> ${LOGFILE}
