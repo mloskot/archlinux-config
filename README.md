@@ -42,3 +42,10 @@ Author
 ------
 
 Mateusz Loskot (mateusz at loskot dot net)
+http://mateusz.loskot.net
+
+License
+-------
+
+I hereby grant free use of the files included under archlinux-config project, and release it to the public domain.
+If your jurisdiction does not recognize the concept of public domain, choose the MIT License.
