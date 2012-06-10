@@ -86,6 +86,8 @@ deploy_file .gvimrc
 deploy_file .gitconfig
 # X
 deploy_file .xinitrc.i3 .xinitrc
+deploy_file .Xresources
+deploy_file .Xresources .Xdefaults
 # XDG
 deploy_file .config/user-dirs.dirs
 deploy_file .config/user-dirs.locale

@@ -1,0 +1,53 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+!-------------------------------------------------------------------------------
+!
+!	U R X V T - Settings
+!
+urxvt*geometry:					100x25
+urxvt*font:					xft:Terminus:pixelsize=14
+urxvt.realBold: True
+urxvt.inheritPixmap: True
+urxvt.background: #000000
+urxvt.foreground: #ffffff
+urxvt.scrollBar: False
+urxvt.internalBorder: 3
+urxvt.externalBorder: 0
+urxvt.tintColor: #663333
+urxvt.saveLines: 10000
+urxvt.jumpScroll: true
+urxvt.multiScroll: true
+urxvt*perl-ext-common:				default,clipboard
+urxvt.urlLauncher: firefox -new-tab
+
+!colors
+!black
+URxvt*color0:					#676767
+URxvt*color8:					#757575
+!red
+URxvt*color1:					#EA6868
+URxvt*color9:					#FF7272
+!green
+URxvt*color2:					#ABCB8D
+URxvt*color10:					#AFD78A
+!yellow
+URxvt*color3:					#E8AE5B
+URxvt*color11:					#FFA75D
+!blue
+URxvt*color4:					#71C5F4
+URxvt*color12:					#67CDE9
+!magenta
+URxvt*color5:					#E2BAF1
+URxvt*color13:					#ECAEE9
+!cyan
+URxvt*color6:					#21F1EA
+URxvt*color14:					#36FFFC
+!white
+URxvt*color7:					#F1F1F1
+URxvt*color15:					#FFFFFF
