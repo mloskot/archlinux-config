@@ -96,6 +96,8 @@ deploy_file .config/i3
 deploy_file .config/i3status
 # Openbox
 deploy_file .config/openbox
+# GTK+ 2.x
+deploy_file .gtkrc-2.0
 # tint2 
 deploy_file .config/tint2
 # volumeicon

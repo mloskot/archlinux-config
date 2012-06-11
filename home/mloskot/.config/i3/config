@@ -179,12 +179,15 @@ assign [class="Firefox"] 1
 assign [class="Chromium"] 1
 assign [class="Pidgin"] 1
 assign [class="Skype"] 1
+assign [class="thunar"] 2
 # }}}
 
 # {{{ automatically starting applications on i3 startup
 exec volumeicon -b
-exec pidgin
+exec firefox
 exec chromium
+exec pidgin
+exec thunar
 #exec dropboxd
 #exec parcellite
 # }}}
