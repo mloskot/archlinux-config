@@ -141,6 +141,8 @@ bindsym $mod+Shift+E exit
 
 # open ... with ThinkVantage Button
 #bindsym XF86Launch1 ...
+
+bindsym Print exec ~/bin/mlscreenshot.sh
 # }}}
 
 # {{{ modes
