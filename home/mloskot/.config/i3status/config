@@ -56,7 +56,7 @@ disk "/" {
 }
 
 volume master {
-        format = "♪: %volume"
+        format = "♪: %volume "
         device = "default"
         mixer = "Master"
         mixer_idx = 0
