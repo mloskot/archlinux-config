@@ -1,0 +1,9 @@
+#
+# ~/.gtkrc-2.0
+#
+# Part of https://github.com/mloskot/archlinux-config
+# Mateusz Loskot <mateusz@loskot.net>
+#
+gtk-theme-name = "Clearlooks"
+gtk-icon-theme-name = "Tango"
+gtk-font-name = "Sans 8"
