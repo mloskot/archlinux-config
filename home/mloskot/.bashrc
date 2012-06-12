@@ -90,7 +90,7 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 	else
-		PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+		PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \$\[\033[00m\] '
 	fi
 
     # Add handy color-enabled aliases
@@ -105,7 +105,7 @@ else
 		# show root@ when we do not have colors
 		PS1='\u@\h \W \$ '
 	else
-		PS1='\u@\h \w \$ '
+		PS1='\u@\h \W \$ '
 	fi
 fi
 
@@ -157,9 +157,9 @@ if [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]]; then
     export GIT_PS1_SHOWUNTRACKEDFILES=1
 
     if ${use_color} ; then
-        PS1='\[\e[1;92m\]\u\[\e[m\] \[\e[1;94m\]\w\[\e[m\] \[\e[1;91m\]$(__git_ps1 "(%s)")\[\e[m\]\[\e[1;92m\]\$\[\e[m\] \[\e[0;37m\]'
+        PS1='\[\e[1;92m\]\u\[\e[m\] \[\e[1;94m\]\W\[\e[m\] \[\e[1;91m\]$(__git_ps1 "(%s)")\[\e[m\]\[\e[1;92m\]\$\[\e[m\] \[\e[0;37m\]'
     else
-        PS1='\u \w $(__git_ps1 "(%s)")\$ '
+        PS1='\u \W $(__git_ps1 "(%s)")\$ '
     fi
 fi
 # }}
