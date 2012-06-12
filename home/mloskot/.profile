@@ -21,3 +21,6 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
+
+WWW_HOME=http://www.archlinux.org
+export WWW_HOME
