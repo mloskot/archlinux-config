@@ -17,6 +17,8 @@ set $term urxvtcd
 set $browser firefox
 set $mua chromium
 set $fm thunar
+set $jabber pidgin
+set $xirc xchat
 # }}}
 
 # {{{ windows and workspaces orientation, layout and style
@@ -179,15 +181,17 @@ assign [class="Firefox"] 1
 assign [class="Chromium"] 1
 assign [class="Pidgin"] 1
 assign [class="Skype"] 1
-assign [class="thunar"] 2
+assign [class="xchat"] 1
+assign [class="Thunar"] 2
 # }}}
 
 # {{{ automatically starting applications on i3 startup
 exec volumeicon -b
-exec firefox
-exec chromium
-exec pidgin
-exec thunar
+exec $browser
+exec $mua
+exec $jabber
+exec $fm
+exec $xirc
 #exec dropboxd
 #exec parcellite
 # }}}
