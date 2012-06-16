@@ -87,6 +87,7 @@ deploy_file .vimrc
 deploy_file .gvimrc
 # Git
 deploy_file .gitconfig
+deploy_file .gitignore_global
 # X
 deploy_file .xinitrc.i3 .xinitrc
 deploy_file .Xresources

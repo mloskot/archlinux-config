@@ -5,3 +5,5 @@
 	branch = auto
 	diff = auto
 	status = auto
+[core]
+	excludesfile = /home/mloskot/.gitignore_global

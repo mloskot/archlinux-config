@@ -1,0 +1,38 @@
+#
+# ~/.gitignore - global git ignore file
+#
+.*
+!.gitignore
+*~
+*.c~
+*.cpp~
+*.swp
+
+# Object files
+*.o
+*.lo
+*.slo
+
+# Libraries
+*.lib
+
+# Shared objects (inc. Windows DLLs)
+*.so
+*.dll
+
+# Executables
+*.exe
+*.out
+
+# Compiled Static libraries
+*.la
+*.lai
+
+# CMake
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+
+# KDE
+.directory
+*.kdev4
