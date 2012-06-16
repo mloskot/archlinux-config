@@ -12,6 +12,7 @@ general {
 order += "wireless wlan0"
 order += "ethernet eth0"
 order += "disk /"
+order += "disk /home"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
@@ -51,8 +52,12 @@ load {
     format = "L: %1min"
 }
 
-disk "/" {
-    format = "HDD: %free"
+disk /{
+    format = "sda1: %used/%total"
+}
+
+disk "/home" {
+    format = "sda3: %used/%total"
 }
 
 volume master {
