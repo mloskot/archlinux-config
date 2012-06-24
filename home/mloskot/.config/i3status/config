@@ -10,11 +10,13 @@ general {
 }
 
 order += "wireless wlan0"
-order += "ethernet eth0"
+#order += "ethernet eth0"
+order += "memory RAM"
+order += "memory SWAP"
 order += "disk /"
 order += "disk /home"
-order += "cpu_temperature 0"
 order += "cpu_usage"
+order += "cpu_temperature 0"
 order += "load"
 order += "battery 0"
 order += "time"
@@ -36,12 +38,20 @@ battery 0 {
     #last_full_capacity = true
 }
 
-cpu_temperature 0 {
-    format = "CPU T: %degrees °C"
+memory "RAM" {
+    format = "RAM: %free"
+}
+
+memory SWAP {
+    format = "SWP: %swapfree"
 }
 
 cpu_usage {
     format = "CPU U: %usage"
+}
+
+cpu_temperature 0 {
+    format = "CPU T: %degrees °C"
 }
 
 time {
@@ -52,7 +62,7 @@ load {
     format = "L: %1min"
 }
 
-disk /{
+disk / {
     format = "sda1: %used/%total"
 }
 
