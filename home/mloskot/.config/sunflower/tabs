@@ -1,0 +1,11 @@
+[options]
+left_notebook_selected = 0
+right_notebook_selected = 0
+
+[left_notebook]
+tab_0 = FileList:0:1:/home/mloskot
+
+[right_notebook]
+tab_0 = FileList:0:1:/home/mloskot
+tab_1 = FileList:0:1:/home/mloskot/dev
+

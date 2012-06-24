@@ -16,7 +16,7 @@ set $mod Mod4
 set $term urxvtcd
 set $browser firefox
 set $mua chromium
-set $fm thunar
+set $fm sunflower 
 set $jabber pidgin
 set $xirc xchat
 # }}}
@@ -182,6 +182,7 @@ assign [class="Chromium"] 1
 assign [class="Pidgin"] 1
 assign [class="Skype"] 1
 assign [class="xchat"] 1
+assign [class="Sunflower"] 2
 assign [class="Thunar"] 2
 # }}}
 
@@ -191,7 +192,7 @@ exec $browser
 exec $mua
 exec $jabber
 exec $fm
-exec $xirc
+#exec $xirc
 #exec dropboxd
 #exec parcellite
 # }}}
