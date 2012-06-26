@@ -1,0 +1,23 @@
+#
+# ~/.gemrc - RubyGems configuration file
+#
+# Part of https://github.com/mloskot/archlinux-config
+# Mateusz Loskot <mateusz@loskot.net>
+# 
+# Read about the gemrc format at http://docs.rubygems.org/read/chapter/11
+#
+# --user-install is used to install to $HOME/.gem/ by default
+#                since we want to separate
+#                pacman installed gems and gem installed gems
+#                :update_sources: true
+#                gemhome: /home/username/gems
+gempath:
+- /home/mloskot/.gems
+gem: --user-install --no-ri --no-rdoc
+:verbose: true
+:benchmark: false
+:backtrace: false
+:bulk_threshold: 1000
+:sources:
+- http://gems.rubyforge.org
+- http://gems.github.com

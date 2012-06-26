@@ -134,6 +134,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# add Ruby gems to PATH
+if [ -d "$HOME/.gem/ruby/1.9.1/bin" ] ; then
+    PATH="$HOME/.gem/ruby/1.9.1/bin:$PATH"
+fi
+
 # set Android environment
 if [ -f "$HOME/.androidrc" ]; then
     . "$HOME/.androidrc"
