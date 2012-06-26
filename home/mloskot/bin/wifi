@@ -6,12 +6,14 @@
 COL_TFRAME=247; COL_TTEXT=241;	COL_H1=12;	COL_H2=226;	COL_WARN=196	#Bright (grey,blue,yellow)
 #COL_TFRAME=22; COL_TTEXT=115;	COL_H1=90;	COL_H2=94;	COL_WARN=196	#Dark (green,magenta,orange)
 
+# DHCP choose dhcpcd or dhclient, only the former has been tested by the script author
+DHCP=dhcpcd
+
 # Set new passphrase if provided:
 if [[ $1 == new ]]; then
 	[[ -z $2 ]] && echo "required ssid missing" && exit
 	[[ -z $3 ]] && echo "required passphrase missing" && exit
 	sudo /bin/bash -c "wpa_passphrase \"$2\" \"$3\" >> /etc/wpa_supplicant.conf"
-	exit
 fi
 
 # Get current BSSID to highlight it in the list
@@ -53,7 +55,7 @@ BEGIN {
 	} else {
 		printf "\033[38;5;'$COL_H2'm%2d\033[38;5;'$COL_TTEXT'm %s \033[38;5;'$COL_H2'm%d%%\033[38;5;'$COL_WARN'm %s\033[0m\n", NUM, BSSID, QUALITY, ESSID;
 	}
-	print NUM, ENCRYPTION, ESSID >> "'$TMPFILE'"
+	printf "%s\t%s\t%s\n", NUM, ENCRYPTION, ESSID >> "'$TMPFILE'"
 }
 END {
 	print " \033[4;38;5;'$COL_TFRAME'm\033(0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\033(B\033[0m"
@@ -64,11 +66,11 @@ END {
 echo
 echo -e " \033[38;5;'$COL_H1'mSelect a network number:\033[0m"
 read -p " » " NUM
-[[ -z $NUM ]] && rm $TMPFILE && exit
+if [[ -z $NUM ]]; then rm $TMPFILE; exit; fi
 
 # get data for selection from tempfile and delete tempfile:
-ESSID=`awk '/^0?'$NUM' / {print substr($0,index($0,$3))}' $TMPFILE`
-ENCRYPT=`awk '/^0?'$NUM' / {print $2}' $TMPFILE`
+ESSID=`awk -F'\t' '/^0?'$NUM'	/ {print substr($0,index($0,$3))}' $TMPFILE`
+ENCRYPT=`awk -F'\t' '/^0?'$NUM'	/ {print $2}' $TMPFILE`
 rm $TMPFILE
 
 
@@ -82,18 +84,18 @@ if [[ "$ENCRYPT" == off ]]; then
 	sudo iwconfig wlan0 essid "$ESSID"
 else
 	#check if configured:
-	[[ ! `grep $ESSID /etc/wpa_supplicant.conf` ]] &&
-		echo -e "\033[38;5;'$COL_WARN'm  ERROR:\033[0m$ESSID has not been set up yet\n  Try: $0 new $ESSID <passphrase>" && exit
+	[[ ! `grep "$ESSID" /etc/wpa_supplicant.conf` ]] &&
+		echo -e "\033[38;5;'$COL_WARN'm  ERROR:\033[0m$ESSID has not been set up yet\n  Try: $0 new \"$ESSID\" <passphrase>" && exit
 	sudo wpa_supplicant -B -c/etc/wpa_supplicant.conf -iwlan0
 fi
 
 # if dhcpcd is already running, kill it.
-if [[ -n `pgrep dhcpcd` ]]; then
-	sudo killall dhcpcd >/dev/null 2>&1
+if [[ -n `pgrep $DHCP` ]]; then
+	sudo killall $DHCP >/dev/null 2>&1
 	sleep 0.25
 fi
 # call dhcpcd
-sudo dhcpcd wlan0 2>&1 | awk '
+sudo $DHCP wlan0 2>&1 | awk '
 BEGIN {
 	print " \033[4;38;5;'$COL_TFRAME'm                                                 \033[0m"
 	print " \033[4;38;5;'$COL_TFRAME'm\033(0aaaaaaaaaaaaaa\033(B  CALLING DHCPCD... \033(0aaaaaaaaaaaaaaa\033(B\033[0;38;5;'$COL_TTEXT'm"
