@@ -145,6 +145,8 @@ if [ -f "$HOME/.oraclerc" ]; then
 fi
 
 export CVS_RSH=ssh
+export SVN_EDITOR=gvim
+export WWW_HOME=http://www.archlinux.org
 # }}}
 
 # {{{ Git
