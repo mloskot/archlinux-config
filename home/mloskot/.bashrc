@@ -134,6 +134,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# add Haskell cabal
+if [ -d "$HOME/.cabal/bin" ] ; then
+    PATH="$HOME/.cabal/bin:$PATH"
+fi
+
 # add Ruby gems to PATH
 if [ -d "$HOME/.gem/ruby/1.9.1/bin" ] ; then
     PATH="$HOME/.gem/ruby/1.9.1/bin:$PATH"
@@ -149,8 +154,9 @@ if [ -f "$HOME/.oraclerc" ]; then
     . "$HOME/.oraclerc"
 fi
 
+export EDITOR=/usr/bin/gvim
+export SVN_EDITOR="$EDITOR --nofork"
 export CVS_RSH=ssh
-export SVN_EDITOR=gvim
 export WWW_HOME=http://www.archlinux.org
 # }}}
 
