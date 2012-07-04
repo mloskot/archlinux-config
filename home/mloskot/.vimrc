@@ -71,7 +71,7 @@ set shiftwidth=4
 set cindent
 set expandtab
 
-set nowrap
+"set nowrap
 
 "set nocp		" do not use omnicomplete
 "
