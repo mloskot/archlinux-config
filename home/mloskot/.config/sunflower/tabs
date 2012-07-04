@@ -3,10 +3,11 @@ left_notebook_selected = 0
 right_notebook_selected = 1
 
 [left_notebook]
-tab_0 = FileList:0:1:/home/mloskot
-tab_1 = FileList:0:1:/home/mloskot/dev/geos/_svn
+tab_0 = FileList:0:1:/home/mloskot/Downloads
+tab_1 = FileList:0:1:/home/mloskot
+tab_2 = FileList:0:1:/home/mloskot/dev/gdal/_svn/trunk.jxr/gdal/frmts
 
 [right_notebook]
-tab_0 = FileList:0:1:/home/mloskot
-tab_1 = FileList:0:1:/home/mloskot/dev/geos/_svn/trunk/include
+tab_0 = FileList:0:1:/home/mloskot/dev/gdal/_svn.win/trunk.jxr/gdal
+tab_1 = FileList:0:1:/home/mloskot/dev/jpegxr/xbackup
 
