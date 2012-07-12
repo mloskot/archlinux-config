@@ -31,6 +31,6 @@ set guioptions+=m
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 " colour setting
-colorscheme desert
+"colorscheme desert
 "colorscheme moria
 "colorscheme herald
