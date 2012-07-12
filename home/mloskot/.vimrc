@@ -17,11 +17,17 @@ runtime! debian.vim
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-syntax on
+syntax enable
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-"set background=dark
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+set background=dark " always dark
+colorscheme solarized
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
