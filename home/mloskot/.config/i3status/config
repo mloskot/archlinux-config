@@ -5,14 +5,11 @@
 # Author: Mateusz Loskot <mateusz@loskot.net>
 #
 general {
-    colors = true
-    interval = 5
+        colors = true
+        interval = 5
 }
 
 order += "wireless wlan0"
-#order += "ethernet eth0"
-order += "memory RAM"
-order += "memory SWAP"
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"
@@ -23,27 +20,14 @@ order += "time"
 order += "volume master"
 
 wireless wlan0 {
-    format_up = "WLAN: (%quality @ %essid) IP: %ip"
-    format_down = "W: down"
+        format_up = "W: %essid @ %ip (Q: %quality)"
+        format_down = "W: down"
 }
 
 ethernet eth0 {
-    # if you use %speed, i3status requires root privileges
-    format_up = "ETH: %ip (%speed)"
-    format_down = "ETH: down"
-}
-
-battery 0 {
-    format = "%status: %percentage %remaining"
-    #last_full_capacity = true
-}
-
-memory "RAM" {
-    format = "RAM: %free"
-}
-
-memory SWAP {
-    format = "SWP: %swapfree"
+        # if you use %speed, i3status requires root privileges
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
 }
 
 cpu_usage {
@@ -54,20 +38,25 @@ cpu_temperature 0 {
     format = "CPU T: %degrees °C"
 }
 
-time {
-    format = "%Y-%m-%d %H:%M:%S"
-}
-
-load {
-    format = "L: %1min"
-}
-
 disk / {
     format = "sda1: %used/%total"
 }
 
 disk "/home" {
     format = "sda3: %used/%total"
+}
+
+
+time {
+    format = "D: %Y-%m-%d T: %H:%M:%S"
+}
+
+load {
+    format = "L: %1min"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining (%consumption)"
 }
 
 volume master {
