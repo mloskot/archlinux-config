@@ -13,7 +13,7 @@ DHCP=dhcpcd
 if [[ $1 == new ]]; then
 	[[ -z $2 ]] && echo "required ssid missing" && exit
 	[[ -z $3 ]] && echo "required passphrase missing" && exit
-	sudo /bin/bash -c "wpa_passphrase \"$2\" \"$3\" >> /etc/wpa_supplicant.conf"
+	sudo /bin/bash -c "wpa_passphrase \"$2\" \"$3\" >> /etc/wpa_supplicant/wpa_supplicant.conf"
 fi
 
 # Get current BSSID to highlight it in the list
@@ -84,9 +84,9 @@ if [[ "$ENCRYPT" == off ]]; then
 	sudo iwconfig wlan0 essid "$ESSID"
 else
 	#check if configured:
-	[[ ! `grep "$ESSID" /etc/wpa_supplicant.conf` ]] &&
+	[[ ! `grep "$ESSID" /etc/wpa_supplicant/wpa_supplicant.conf` ]] &&
 		echo -e "\033[38;5;'$COL_WARN'm  ERROR:\033[0m$ESSID has not been set up yet\n  Try: $0 new \"$ESSID\" <passphrase>" && exit
-	sudo wpa_supplicant -B -c/etc/wpa_supplicant.conf -iwlan0
+	sudo wpa_supplicant -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
 fi
 
 # if dhcpcd is already running, kill it.
