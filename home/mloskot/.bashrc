@@ -112,6 +112,10 @@ fi
 PS2='> '
 PS3='> '
 PS4='+ '
+
+if echo hello|grep --color=auto l >/dev/null 2>&1; then
+  export GREP_OPTIONS='--color=auto'
+fi
 # }}}
 
 # {{{ Aliases
