@@ -2,7 +2,7 @@
 FontName=Terminus 10
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
-MiscBordersDefault=FALSE
+MiscBordersDefault=TRUE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
@@ -18,7 +18,6 @@ MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=9999
-# Solarized colors
 ColorCursor=#9393a1a1a1a1
 ColorForeground=#FDFDF6F6E3E3
 ColorBackground=#00002B2B3636
@@ -38,3 +37,4 @@ ColorPalette13=#838394949696
 ColorPalette14=#6c6c7171c4c4
 ColorPalette15=#9393a1a1a1a1
 ColorPalette16=#fdfdf6f6e3e3
+
