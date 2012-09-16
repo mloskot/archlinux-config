@@ -3,7 +3,7 @@
 # make and colormake selector
 #
 
-colormake || make || {
+colormake $* || make $* || {
     echo >&2 "*** Neither colormake nor make found. Aborting.";
     exit 1;
 }
