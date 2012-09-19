@@ -189,8 +189,6 @@ assign [class="Chromium"] 1
 assign [class="Pidgin"] 1
 assign [class="Skype"] 1
 assign [class="xchat"] 1
-assign [class="Sunflower"] 2
-assign [class="Thunar"] 2
 # }}}
 
 # {{{ automatically starting applications on i3 startup
