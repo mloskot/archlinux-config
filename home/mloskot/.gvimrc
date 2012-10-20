@@ -34,3 +34,4 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 "colorscheme desert
 "colorscheme moria
 "colorscheme herald
+"colorscheme wombat
