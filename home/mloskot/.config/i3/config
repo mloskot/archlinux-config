@@ -140,6 +140,8 @@ bindsym $mod+Shift+parenright move container to workspace 10
 bindsym $mod+o move scratchpad
 # Show the first scratchpad window
 bindsym $mod+i scratchpad show
+bindsym $mod+u [instance="krusader"] scratchpad show
+bindsym $mod+n [instance="evince"] scratchpad show
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -196,7 +198,7 @@ exec volumeicon -b
 exec $browser
 exec $mua
 exec $jabber
-#exec $xirc
+exec $xirc
 #exec $fm
 #exec dropboxd
 #exec parcellite
