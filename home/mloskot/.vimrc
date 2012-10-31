@@ -29,6 +29,7 @@ endif
 set background=dark " always dark
 "colorscheme solarized
 colorscheme wombat
+"colorscheme murphy
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
