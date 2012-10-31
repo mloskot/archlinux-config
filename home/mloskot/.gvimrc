@@ -7,6 +7,7 @@
 "else
 "  set guifont=-misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
 "endif
+set guifont=Terminus,12
 
 " If you want to run gvim with a dark background, try using a different
 " colorscheme or running 'gvim -reverse'.
