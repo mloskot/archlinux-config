@@ -186,8 +186,8 @@ bindsym $mod+r mode "resize"
 # }}}
 
 # {{{ automatically putting clients on specific workspaces
-assign [class="Firefox"] 1
-assign [class="Chromium"] 1
+#assign [class="Firefox"] 1
+#assign [class="Chromium"] 1
 assign [class="Pidgin"] 1
 assign [class="Skype"] 1
 assign [class="Xchat"] 1
