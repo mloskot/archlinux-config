@@ -85,8 +85,8 @@ deploy_file .gitconfig
 deploy_file .gitignore_global
 # X
 deploy_file .xinitrc.i3 .xinitrc
-deploy_file .Xresources
-deploy_file .Xresources .Xdefaults
+#deploy_file .Xresources
+#deploy_file .Xresources .Xdefaults
 # XDG
 deploy_file .config/user-dirs.dirs
 deploy_file .config/user-dirs.locale
