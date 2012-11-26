@@ -21,17 +21,12 @@ function make_symlink()
         return 1
     fi
 
-    if [ ${OVERWRITE} -eq 1 ]; then
-    	if [ -f "${L}" ]; then
-	    echo "Regular file ${L} already exists - overwriting"
-            rm ${L}
-    	elif [ -L "${L}" ]; then
-            echo "Symlink ${L} already exists - overwriting"
-            rm ${L}
-        else
-            echo "Symlink ${L} already exists - skipping"
-            return 0
-        fi
+    if [ -f "${L}" ]; then
+        echo "Regular file ${L} already exists - overwriting"
+        [ ${OVERWRITE} -eq 1 ] && rm ${L}
+    elif [ -L "${L}" ]; then
+        echo "Symlink ${L} already exists - overwriting"
+        [ ${OVERWRITE} -eq 1 ] && rm ${L}
     fi
 
     ln -s ${T} ${L}
