@@ -21,17 +21,12 @@ function make_symlink()
         return 1
     fi
 
-    if [ ${OVERWRITE} -eq 1 ]; then
-    	if [ -f "${L}" ]; then
-	    echo "Regular file ${L} already exists - overwriting"
-            rm ${L}
-    	elif [ -L "${L}" ]; then
-            echo "Symlink ${L} already exists - overwriting"
-            rm ${L}
-        else
-            echo "Symlink ${L} already exists - skipping"
-            return 0
-        fi
+    if [ -f "${L}" ]; then
+        echo "Regular file ${L} already exists - overwriting"
+        [ ${OVERWRITE} -eq 1 ] && rm ${L}
+    elif [ -L "${L}" ]; then
+        echo "Symlink ${L} already exists - overwriting"
+        [ ${OVERWRITE} -eq 1 ] && rm ${L}
     fi
 
     ln -s ${T} ${L}
@@ -90,8 +85,8 @@ deploy_file .gitconfig
 deploy_file .gitignore_global
 # X
 deploy_file .xinitrc.i3 .xinitrc
-deploy_file .Xresources
-deploy_file .Xresources .Xdefaults
+#deploy_file .Xresources
+#deploy_file .Xresources .Xdefaults
 # XDG
 deploy_file .config/user-dirs.dirs
 deploy_file .config/user-dirs.locale
