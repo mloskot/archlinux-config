@@ -17,7 +17,7 @@ set $mod Mod4
 set $term terminal 
 set $browser firefox
 set $mua chromium
-set $fm sunflower 
+set $fm krusader
 set $jabber pidgin
 set $xirc xchat
 # }}}
