@@ -75,6 +75,7 @@ deploy_file bin
 # Bash
 deploy_file .profile
 deploy_file .bash_aliases
+deploy_file .bash_profile
 deploy_file .bashrc
 # Vim
 deploy_file .vim
