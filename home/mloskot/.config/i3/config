@@ -142,6 +142,7 @@ bindsym $mod+o move scratchpad
 bindsym $mod+i scratchpad show
 bindsym $mod+u [instance="krusader"] scratchpad show
 bindsym $mod+n [instance="evince"] scratchpad show
+bindsym $mod+m [instance="Pidgin"] scratchpad show
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
