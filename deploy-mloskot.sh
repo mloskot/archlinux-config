@@ -70,6 +70,9 @@ fi
 
 echo "Deploying dotfiles from ${DOTFILES} to ${HOME}"
 echo
+#
+deploy_file signature.txt
+deploy_file .wallpapers
 # ~/bin
 deploy_file bin
 # Bash
@@ -94,15 +97,13 @@ deploy_file .config/user-dirs.locale
 # i3wm
 deploy_file .config/i3
 deploy_file .config/i3status
-# Openbox
-deploy_file .config/openbox
 # GTK+ 2.x
 deploy_file .gtkrc-2.0
-# tint2 
-deploy_file .config/tint2
-# volumeicon
-deploy_file .config/volumeicon
-# Conky
 deploy_file .conkyrc
-# mcabber
 deploy_file .mcabber
+# Misc ~/.config
+deploy_file .config/gtk-3.0
+deploy_file .config/openbox
+deploy_file .config/volumeicon
+deploy_file .config/tint2
+deploy_file .config/Terminal
