@@ -52,7 +52,6 @@ ulimit -c unlimited
 I3_CONFIG_HOME=${HOME}/.config/i3
 LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
 echo "Starting at $(date)" > ${LOGFILE}
+# Uncomment to log debugging info
 #exec /usr/bin/i3 -V -d all >> ${LOGFILE}
-#exec ck-launch-session dbus-launch --auto-syntax --exit-with-session i3 -V >> ${LOGFILE} 2>&1
-#exec /usr/bin/i3 >> ${LOGFILE}
-#exec ck-launch-session dbus-launch /usr/bin/i3 -V >> ${LOGFILE}
+exec /usr/bin/i3 >> ${LOGFILE}
