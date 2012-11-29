@@ -70,12 +70,9 @@ fi
 
 echo "Deploying dotfiles from ${DOTFILES} to ${HOME}"
 echo
-#
-deploy_file signature.txt
-deploy_file .wallpapers
 # ~/bin
 deploy_file bin
-# Bash
+# shell/bash
 deploy_file .profile
 deploy_file .bash_aliases
 deploy_file .bash_profile
@@ -110,3 +107,6 @@ deploy_file .kde4/share/config/krusaderrc
 # Misc
 deploy_file .conkyrc
 deploy_file .mcabber
+deploy_file .packer.conf
+deploy_file .wallpapers
+deploy_file signature.txt
