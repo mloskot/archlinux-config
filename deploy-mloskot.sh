@@ -106,7 +106,7 @@ deploy_file .config/volumeicon
 deploy_file .config/tint2
 deploy_file .config/Terminal
 # ~/.kdev4
-deploy_file .kdev4/share/config/krusaderrc
+deploy_file .kde4/share/config/krusaderrc
 # Misc
 deploy_file .conkyrc
 deploy_file .mcabber
