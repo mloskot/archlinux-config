@@ -4,6 +4,10 @@
 # Part of https://github.com/mloskot/archlinux-config
 # Mateusz Loskot <mateusz@loskot.net>
 #
+# packer
+alias pa="packer -S --auronly"
+alias pann="packer -S --auronly --noconfirm --noedit"
+alias payu="packer -Syu --auronly"
 
 # Skype
 alias skype='LD_PRELOAD=/usr/libxx/libv4l/v4l1compat.so skype'
