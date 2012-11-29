@@ -99,11 +99,14 @@ deploy_file .config/i3
 deploy_file .config/i3status
 # GTK+ 2.x
 deploy_file .gtkrc-2.0
-deploy_file .conkyrc
-deploy_file .mcabber
-# Misc ~/.config
+# ~/.config
 deploy_file .config/gtk-3.0
 deploy_file .config/openbox
 deploy_file .config/volumeicon
 deploy_file .config/tint2
 deploy_file .config/Terminal
+# ~/.kdev4
+deploy_file .kdev4/share/config/krusaderrc
+# Misc
+deploy_file .conkyrc
+deploy_file .mcabber
