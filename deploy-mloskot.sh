@@ -9,8 +9,19 @@
 # Configuration
 DOTFILES=${PWD}/home/mloskot
 OVERWRITE=1
-
+#
 # Functions
+#
+usage()
+{
+    echo "archlinux-config deployment by Mateusz Loskot <mateusz@loskot.net>"
+    echo ""
+    echo "Usage:"
+    echo "$0 TARGET" 
+    echo "   TARGET     Name of target machine: dog or gaja"
+    echo ""
+    echo "Git repository at https://github.com/mloskot/archlinux-config"
+}
 
 function make_symlink()
 {
@@ -39,7 +50,7 @@ function deploy_file()
 	T=${1}
     L=${2}
     if [ -z "${L}" ]; then
-        L=${T} # relative path
+        L=${T} # target renaming or relative path
     fi
 
     LINK_TARGET=${DOTFILES}/${T}
@@ -68,7 +79,17 @@ if [ ! -d "${DOTFILES}" ]; then
 	exit 1
 fi
 
-echo "Deploying dotfiles from ${DOTFILES} to ${HOME}"
+while true; do
+    case "$1" in 
+        dog) TARGET=dog; break;;
+        gaja) TARGET=gaja; break;;
+
+        *) usage; exit 0;;
+    esac
+    shift
+done
+
+echo "Deploying '${TARGET}' dotfiles from ${DOTFILES} to ${HOME}"
 echo
 # ~/bin
 deploy_file bin
@@ -92,7 +113,7 @@ deploy_file .xinitrc.i3 .xinitrc
 deploy_file .config/user-dirs.dirs
 deploy_file .config/user-dirs.locale
 # i3wm
-deploy_file .config/i3
+deploy_file .config/i3.${TARGET} .config/i3
 deploy_file .config/i3status
 # GTK+ 2.x
 deploy_file .gtkrc-2.0
