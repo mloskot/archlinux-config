@@ -19,7 +19,7 @@ set $browser firefox
 set $mua chromium
 set $fm krusader
 set $jabber pidgin
-set $xirc xchat
+set $xirc hexchat
 # }}}
 
 # {{{ windows and workspaces orientation, layout and style
@@ -191,7 +191,7 @@ bindsym $mod+r mode "resize"
 #assign [class="Chromium"] 1
 assign [class="Pidgin"] 1
 assign [class="Skype"] 1
-assign [class="Xchat"] 1
+assign [class="HexChat"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
