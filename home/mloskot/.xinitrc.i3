@@ -54,4 +54,5 @@ LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
 echo "Starting at $(date)" > ${LOGFILE}
 # Uncomment to log debugging info
 #exec /usr/bin/i3 -V -d all >> ${LOGFILE}
-exec /usr/bin/i3 >> ${LOGFILE}
+#exec /usr/bin/i3 >> ${LOGFILE}
+exec /usr/bin/i3

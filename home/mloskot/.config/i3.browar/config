@@ -13,8 +13,7 @@ set $mod Mod4
 #set $alt Mod1
 
 # default applications
-#set $term urxvtcd
-set $term terminal 
+set $term xfce4-terminal 
 set $browser firefox
 set $mua chromium
 set $fm krusader
