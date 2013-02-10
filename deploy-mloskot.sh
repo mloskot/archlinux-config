@@ -18,7 +18,7 @@ usage()
     echo ""
     echo "Usage:"
     echo "$0 TARGET" 
-    echo "   TARGET     Name of target machine: dog or gaja"
+    echo "   TARGET     Name of target machine: browar, dog or gaja"
     echo ""
     echo "Git repository at https://github.com/mloskot/archlinux-config"
 }
@@ -81,6 +81,7 @@ fi
 
 while true; do
     case "$1" in 
+        browar) TARGET=browar; break;;
         dog) TARGET=dog; break;;
         gaja) TARGET=gaja; break;;
 

@@ -1,0 +1,207 @@
+# i3 config file (v4) - ~/.config/i3/config or ~/.i3/config
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+# Author: Mateusz Loskot <mateusz@loskot.net>
+#
+# Sources and credits:
+# https://github.com/kalos/i3-config/
+#
+# {{{ variables
+# special keys
+set $mod Mod4
+#set $alt Mod1
+
+# default applications
+#set $term urxvtcd
+set $term terminal 
+set $browser firefox
+set $mua chromium
+set $fm krusader
+set $jabber pidgin
+set $xirc hexchat
+# }}}
+
+# {{{ windows and workspaces orientation, layout and style
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Orientation for new workspaces: <horizontal|vertical|auto>
+default_orientation horizontal
+# }}}
+
+# {{{ apparence
+# font for window titles. ISO 10646 = Unicode
+# i3 uses X core fonts (not Xft) for rendering window titles.
+# default:
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# Terminus:
+#font -*-terminus-medium-r-normal-*-14-140-72-72-C-80-iso10646-1
+
+# Colors which i3 uses to draw the window decorations
+# Default:
+# class                 border  backgr. text    indicator
+client.focused          #4c7899 #285577 #ffffff #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+# }}}
+
+# {{{ keyboard bindings
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+# alternative: $term urxvtcd
+# bindsym $mod+Return exec --no-startup-id $term
+bindsym $mod+Return exec --no-startup-id $term
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+# alternative:
+#bindsym $mod+p exec --no-startup-id dmenu_run -i -b -nb '#444444' -nf '#dddddd' -sb '#692E81' -p 'Run:'
+
+# kill focused window
+bindsym $mod+Shift+Q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+J move left
+bindsym $mod+Shift+K move down
+bindsym $mod+Shift+L move up
+bindsym $mod+Shift+colon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, default)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout default
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindcode $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+exclam move container to workspace 1
+bindsym $mod+Shift+at move container to workspace 2
+bindsym $mod+Shift+numbersign move container to workspace 3
+bindsym $mod+Shift+dollar move container to workspace 4
+bindsym $mod+Shift+percent move container to workspace 5
+bindsym $mod+Shift+asciicircum move container to workspace 6
+bindsym $mod+Shift+ampersand move container to workspace 7
+bindsym $mod+Shift+asterisk move container to workspace 8
+bindsym $mod+Shift+parenleft move container to workspace 9
+bindsym $mod+Shift+parenright move container to workspace 10
+
+# Make the currently focused window a scratchpad
+bindsym $mod+o move scratchpad
+# Show the first scratchpad window
+bindsym $mod+i scratchpad show
+bindsym $mod+u [instance="krusader"] scratchpad show
+bindsym $mod+n [instance="evince"] scratchpad show
+bindsym $mod+m [instance="Pidgin"] scratchpad show
+
+# reload the configuration file
+bindsym $mod+Shift+C reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+O exit
+
+# open ... with ThinkVantage Button
+#bindsym XF86Launch1 ...
+
+bindsym Print exec ~/bin/mlscreenshot.sh
+# }}}
+
+# {{{ modes
+# resize window (you can also use the mouse for that)
+mode "resize" {
+    # These bindings trigger as soon as you enter the resize mode
+
+    # Pressing left will shrink the window's width.
+    # Pressing right will grow the window's width.
+    # Pressing up will shrink the window's height.
+    # Pressing down will grow the window's height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
+
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Enter resize mode
+bindsym $mod+r mode "resize"
+# }}}
+
+# {{{ automatically putting clients on specific workspaces
+#assign [class="Firefox"] 1
+#assign [class="Chromium"] 1
+assign [class="Pidgin"] 1
+assign [class="Skype"] 1
+assign [class="HexChat"] 1
+# }}}
+
+# {{{ automatically starting applications on i3 startup
+exec volumeicon -b
+# }}}
+
+# {{{ i3bar
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    status_command i3status
+}
+# }}}
