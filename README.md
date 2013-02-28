@@ -6,7 +6,7 @@ URL: https://github.com/mloskot/archlinux-config
 Collection of system configuration files and user-specific
 dotfiles for Arch Linux installation.
 
-I mainly use it to setup the system on my Lenovo ThinkPad T400.
+I mainly use it to setup the Arch on Lenovo ThinkPad T400 and Asus Eee PC 901.
 
 Overview
 --------
@@ -43,8 +43,8 @@ Deployment
 Author
 ------
 
-Mateusz Loskot (mateusz at loskot dot net)
-http://mateusz.loskot.net
+[Mateusz Loskot](http://mateusz.loskot.net) (mateusz at loskot dot net)
+
 
 License
 -------
