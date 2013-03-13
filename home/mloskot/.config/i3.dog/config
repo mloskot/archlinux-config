@@ -154,6 +154,11 @@ bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # open ... with ThinkVantage Button
 #bindsym XF86Launch1 ...
 
+# Volume
+#bindsym XF86AudioRaiseVolume exec amixer -q sset Master 2%+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q sset Master 2%- unmute
+#bindsym XF86AudioMute exec amixer -q sset Master toggle
+
 bindsym Print exec ~/bin/mlscreenshot.sh
 # }}}
 
