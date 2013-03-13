@@ -1,28 +1,37 @@
-Arch Linux Setup
-================
+# Linux Setup
 
-URL: https://github.com/mloskot/archlinux-config
+https://github.com/mloskot/linux-config
 
-Collection of system configuration files and user-specific
-dotfiles for Arch Linux installation.
+Collection of user dotfiles and system configuration files for 
+my Linux systems based on Arch Linux, Debian and Ubuntu.
 
-I mainly use it to setup the Arch on Lenovo ThinkPad T400 and Asus Eee PC 901.
+I use this bundle to configure:
+* Arch Linxu on Lenovo ThinkPad T400 and Asus Eee PC 901
+* Ubuntu on Lenovo Thinkpad W700
+* Debian on remote VPS
 
-Overview
---------
+Originally developed for Arch Linux: https://github.com/mloskot/archlinux-config
 
-Hostname: dog
-Username: root, mloskot
-Purpose: common applications, internet, software development
+## Systems
 
-Directories
------------
+### Arch Linux
+
+*TODO* 
+
+### Ubuntu
+
+*TODO* 
+
+### Debian
+
+*TODO* 
+
+## Directories
 
 * `/etc`          - system-wide configuration
 * `/home/mloskot` - user-specific dotfiles dedicated for mloskot user
 
-Deployment
-----------
+## Deployment
 
 ### System-wide configuration:
 
@@ -40,14 +49,11 @@ Deployment
 ```
 * Review the log genererated to `stdout`.
 
-Author
-------
+## Author
 
 [Mateusz Loskot](http://mateusz.loskot.net) (mateusz at loskot dot net)
 
-
-License
--------
+## License
 
 I hereby grant free use of the files included under archlinux-config project, and release it to the public domain.
 If your jurisdiction does not recognize the concept of public domain, choose the MIT License.
