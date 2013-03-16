@@ -2,15 +2,13 @@
 #
 # Author: Mateusz Loskot <mateusz@loskot.net>
 #
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# See http://i3wm.org/docs/userguide.html for a complete reference!
 #
 # Sources and credits:
 # https://github.com/kalos/i3-config/
 #
 # {{{ variables
-# special keys
 set $mod Mod4
-#set $alt Mod1
 
 # default applications
 #set $term urxvtcd
@@ -35,8 +33,6 @@ default_orientation horizontal
 # i3 uses X core fonts (not Xft) for rendering window titles.
 # default:
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# Terminus:
-#font -*-terminus-medium-r-normal-*-14-140-72-72-C-80-iso10646-1
 
 # Colors which i3 uses to draw the window decorations
 # Default:
@@ -154,6 +150,11 @@ bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # open ... with ThinkVantage Button
 #bindsym XF86Launch1 ...
 
+# Volume
+#bindsym XF86AudioRaiseVolume exec amixer -q sset Master 2%+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q sset Master 2%- unmute
+#bindsym XF86AudioMute exec amixer -q sset Master toggle
+
 bindsym Print exec ~/bin/mlscreenshot.sh
 # }}}
 
@@ -195,7 +196,7 @@ assign [class="HexChat"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
-exec volumeicon 
+exec volumeicon
 # }}}
 
 # {{{ i3bar
