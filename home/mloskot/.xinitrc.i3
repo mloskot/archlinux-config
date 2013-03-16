@@ -43,6 +43,9 @@ export AWT_TOOLKIT=XToolkit
 # Set background color
 xsetroot -solid "#333333"
 
+# set background wallpaper
+sh ~/.fehbg &
+
 # Enable core dumps in case something goes wrong
 ulimit -c unlimited
 
