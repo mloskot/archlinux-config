@@ -75,7 +75,7 @@ Window Width=900
 [KrViewerWindow]
 Window Height=861
 Window Maximized=false
-Window Width=476
+Window Width=1436
 
 [Look&Feel]
 Mark Dirs=false
@@ -102,8 +102,8 @@ Krusader_Volume=1
 [Private]
 Left PanelPopup Splitter Sizes=318,317
 Maximized=false
-PopularUrls=file:///home/mloskot/Videos/archive/,file:///home/mloskot/Videos/,file:///home/mloskot/Videos/movies/,file:///media/videos/,file:///,file:///media/,file:///media/secret/svn/,file:///home/mloskot/Documents/secret/ssh/dev413/,file:///home/mloskot/Documents/secret/ssh/,file:///media/secret/ssh/dev413/,file:///media/secret/ssh/,file:///media/secret/,file:///home/mloskot/Documents/secret/,file:///home/mloskot/,file:///home/mloskot/Documents/,file:///media/music/,file:///media/articles/,file:///home/mloskot/Documents/books/,file:///media/books/,file:///home/mloskot/dev/beastagent/_git/,file:///home/mloskot/Pictures/,file:///home/,file:///bin/,file:///media/mloskot/,file:///media/pantera/inne foty/100MEDIA/1/,file:///media/pantera/inne foty/100MEDIA/1/100MEDIA/,file:///media/photo/,file:///media/photo/archive/,file:///media/photo/archive/pentaxk10d/,file:///media/mloskot/Documents/
-PopularUrlsRank=13,12,11,4,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PopularUrls=file:///home/mloskot/xbackup/root.browarek/install/etc/udev/,file:///home/mloskot/xbackup/root.browarek/install/etc/udev/hwdb.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/udev/rules.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/systemd/,file:///home/mloskot/xbackup/root.browarek/install/etc/systemd/system/,file:///home/mloskot/xbackup/root.browarek/install/etc/,file:///home/mloskot/xbackup/root.browarek/install/etc/rc.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/profile.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/network.d/,file:///home/mloskot/xbackup/root.browarek/install/,file:///home/mloskot/xbackup/root.browarek/install/etc/network.d/interfaces/,file:///home/mloskot/xbackup/root.browarek/,file:///home/mloskot/xbackup/root.browarek/install/etc/modules-load.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/modprobe.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/mkinitcpio.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/kernel/,file:///home/mloskot/xbackup/root.browarek/install/etc/ifplugd/,file:///home/mloskot/xbackup/root.browarek/install/etc/conf.d/,file:///home/mloskot/xbackup/root.browarek/install/etc/binfmt.d/,file:///home/mloskot/xbackup/,file:///home/mloskot/software/microsoft/vs2010/,file:///home/mloskot/Downloads/,file:///home/mloskot/software/microsoft/,file:///home/mloskot/,file:///home/,file:///,file:///home/mloskot/software/,file:///media/,file:///home/mloskot/dev/beastagent/_git/,file:///home/mloskot/Pictures/
+PopularUrlsRank=16,15,13,10,9,9,6,4,2,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Right PanelPopup Splitter Sizes=318,317
 Start Position=0,18
 Start Size=1436,861
@@ -156,12 +156,12 @@ Sort Column=0
 [Startup][Left Tab Bar][Tabs][Tab1]
 Properties=0
 Type=0
-Url=/home/mloskot/Videos/movies
+Url=/home/mloskot/Downloads
 
 [Startup][Left Tab Bar][Tabs][Tab1][History]
 CurrentIndex=0
-CurrentItems=..,movies,..,archive,..,movies,..,movies,Videos,..,Documents,..,..
-Entrys=file:///home/mloskot/Videos/movies,file:///home/mloskot/Videos,file:///home/mloskot/Videos/archive,file:///home/mloskot/Videos,file:///home/mloskot/Videos/movies,file:///home/mloskot/Videos,file:///home/mloskot/Videos/movies,file:///home/mloskot/Videos,file:///home/mloskot,file:///home/mloskot/Documents,file:///home/mloskot,file:///home/mloskot/Documents,file:///home/mloskot/Documents/secret
+CurrentItems=fabia-numerki.jpg,Downloads,..,..,movies,..,archive,..,movies,..,movies,Videos,..
+Entrys=file:///home/mloskot/Downloads,file:///home/mloskot,file:///home/mloskot/Videos,file:///home/mloskot/Videos/movies,file:///home/mloskot/Videos,file:///home/mloskot/Videos/archive,file:///home/mloskot/Videos,file:///home/mloskot/Videos/movies,file:///home/mloskot/Videos,file:///home/mloskot/Videos/movies,file:///home/mloskot/Videos,file:///home/mloskot,file:///home/mloskot/Documents
 
 [Startup][Left Tab Bar][Tabs][Tab1][View]
 AutoResizeColumns=true
@@ -169,7 +169,7 @@ Descending Sort Order=0
 Filter=3
 FilterApplysToDirs=false
 IconSize=22
-Saved State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t®\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x02«\x00\x00\x00\t\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x01´\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x002\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00P\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00~\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x1c\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00
+Saved State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t®\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x02∏\x00\x00\x00\t\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x01ú\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x002\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00P\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00~\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x1c\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00
 ShowPreviews=false
 Sort Column=0
 
@@ -199,12 +199,12 @@ Sort Column=0
 [Startup][Right Tab Bar][Tabs][Tab1]
 Properties=0
 Type=0
-Url=/
+Url=/home/mloskot/xbackup/root.browarek/install
 
 [Startup][Right Tab Bar][Tabs][Tab1][History]
 CurrentIndex=0
-CurrentItems=media,..,media,..,..,videos,..,videos,..,videos,..,..,svn
-Entrys=file:///,file:///media,file:///,file:///media,file:///media/videos,file:///media,file:///media/videos,file:///media,file:///media/videos,file:///media,file:///media/secret,file:///media/secret/svn,file:///media/secret
+CurrentItems=lspci.4,install,..,..,..,..,hwdb.d,..,rules.d,udev,..,..,system
+Entrys=file:///home/mloskot/xbackup/root.browarek/install,file:///home/mloskot/xbackup/root.browarek,file:///home/mloskot/xbackup/root.browarek/install,file:///home/mloskot/xbackup/root.browarek/install/etc,file:///home/mloskot/xbackup/root.browarek/install/etc/udev,file:///home/mloskot/xbackup/root.browarek/install/etc/udev/hwdb.d,file:///home/mloskot/xbackup/root.browarek/install/etc/udev,file:///home/mloskot/xbackup/root.browarek/install/etc/udev/rules.d,file:///home/mloskot/xbackup/root.browarek/install/etc/udev,file:///home/mloskot/xbackup/root.browarek/install/etc,file:///home/mloskot/xbackup/root.browarek/install/etc/systemd,file:///home/mloskot/xbackup/root.browarek/install/etc/systemd/system,file:///home/mloskot/xbackup/root.browarek/install/etc/systemd
 
 [Startup][Right Tab Bar][Tabs][Tab1][View]
 AutoResizeColumns=true
