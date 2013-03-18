@@ -12,16 +12,22 @@ Xft.hintstyle:  hintslight
 !
 urxvt*geometry: 100x25
 urxvt*font: xft:Terminus:pixelsize=14
+urxvt*transparent: true
+urxvt*shading: 30
 urxvt.realBold: True
-urxvt.inheritPixmap: True
-urxvt.background: #000000
+!urxvt.inheritPixmap: false
+!urxvt.background: #000000
 urxvt.foreground: #ffffff
 urxvt.scrollBar: False
 urxvt.internalBorder: 3
 urxvt.externalBorder: 0
-urxvt.tintColor: #663333
+!urxvt.tintColor: #663333
 urxvt.saveLines: 10000
 urxvt.jumpScroll: true
 urxvt.multiScroll: true
-urxvt*perl-ext-common: default
-urxvt.urlLauncher: firefox -new-tab
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher:  /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
