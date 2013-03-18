@@ -9,6 +9,10 @@ alias pa="packer -S --auronly"
 alias pann="packer -S --auronly --noconfirm --noedit"
 alias payu="packer -Syu --auronly"
 
+# sql*plus
+alias rlrman='rlwrap rman'
+alias rlsqlplus='rlwrap sqlplus
+
 # Skype
 alias skype='LD_PRELOAD=/usr/libxx/libv4l/v4l1compat.so skype'
 
