@@ -195,6 +195,7 @@ assign [class="HexChat"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
+exec dropboxd
 exec volumeicon
 # }}}
 
