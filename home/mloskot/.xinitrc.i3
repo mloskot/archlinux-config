@@ -4,6 +4,7 @@
 #
 # Mateusz Loskot <mateusz@loskot.net>
 #
+echo ".xinitrc starting at $(date)" > ${LOGFILE}
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -30,7 +31,7 @@ unset LC_COLLATE
 export AWT_TOOLKIT=XToolkit
 
 # Set background color
-xsetroot -solid "#333333"
+#xsetroot -solid "#333333"
 
 # set background wallpaper
 sh ~/.fehbg &
@@ -42,6 +43,7 @@ ulimit -c unlimited
 I3_CONFIG_HOME=${HOME}/.config/i3
 LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
 # Uncomment to log debugging info
-#echo "Starting at $(date)" > ${LOGFILE}
+echo "i3 starting at $(date)" > ${LOGFILE}
 #exec /usr/bin/i3 -V -d all >> ${LOGFILE}
 exec /usr/bin/i3
+echo "i3 started at $(date)" > ${LOGFILE}
