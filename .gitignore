@@ -1,5 +1,6 @@
 *~
 *.log
 *.swp
+.netrwhist
 log-*
 logfile
