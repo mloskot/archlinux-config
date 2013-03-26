@@ -1,6 +1,7 @@
 [user]
     name = Mateusz Loskot
     email = mateusz@loskot.net
+    signingkey = BB2AC1F2
 [color]
     branch = auto
     diff = auto
@@ -20,3 +21,8 @@
     ls = ls-files
     # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
+    # Generate GitHub repository changelog in Markdown
+    # usage: git <alias> first_tag last_tag github_user github_repo
+    ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
+[github]
+    user = mloskot
