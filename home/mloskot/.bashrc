@@ -168,7 +168,6 @@ export WWW_HOME=http://www.archlinux.org
 if [[ $PS1 && -f /usr/share/git/git-prompt.sh ]]; then
     source /usr/share/git/git-prompt.sh
 
-    # git bash completion
     export GIT_PS1_SHOWDIRTYSTATE=1
     export GIT_PS1_SHOWSTASHSTATE=1
     export GIT_PS1_SHOWUNTRACKEDFILES=1
