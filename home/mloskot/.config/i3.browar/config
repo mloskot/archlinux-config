@@ -194,7 +194,7 @@ assign [class="HexChat"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
-exec volumeicon -b
+exec volumeicon
 # }}}
 
 # {{{ i3bar
