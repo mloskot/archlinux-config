@@ -11,12 +11,14 @@
 set $mod Mod4
 
 # default applications
-set $term urxvtcd
+#set $term urxvtcd # i3-sensible-terminal
+set $term xfce4-terminal
 set $browser firefox
 set $mua chromium
 set $fm krusader
 set $jabber pidgin
-set $xirc hexchat
+set $voip skype
+set $irc hexchat
 # }}}
 
 # {{{ windows and workspaces orientation, layout and style
@@ -46,7 +48,7 @@ client.urgent           #2f343a #900000 #ffffff #900000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -177,6 +179,9 @@ assign [class="Skype"] 1
 
 # {{{ automatically starting applications on i3 startup
 exec dropboxd
+exec $jabber
+#exec $voip
+exec $irc
 # }}}
 
 
