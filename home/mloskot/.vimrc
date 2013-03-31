@@ -99,5 +99,12 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 " Pascal Settings
 au BufRead,BufNewFile *.PAS set filetype=pascal
 
+" NERDTree
+map <C-f> :NERDTreeToggle<CR>
+
+" TabBar
 let g:Tb_MinSize = 1
-let g:Tb_MaxSize = 0
+let g:Tb_MaxSize=0
+let g:Tb_SplitBelow=1
+let g:Tb_MoreThanOne=0
+let g:Tb_ModSelTarget=1
