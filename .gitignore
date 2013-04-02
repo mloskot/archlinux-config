@@ -2,6 +2,10 @@
 *.log
 *.swp
 .netrwhist
-home/mloskot/.vim/bundle/
 log-*
 logfile
+home/mloskot/.vim/bundle/
+home/mloskot/bin/b2
+home/mloskot/bin/bjam
+home/mloskot/bin/packer
+home/mloskot/bin/doxygen_xml2qbk
