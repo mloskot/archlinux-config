@@ -9,20 +9,23 @@
 [core]
     excludesfile = /home/mloskot/.gitignore_global
 [alias]
+    # commands shorcuts
     st = status
     ci = commit
     br = branch
     co = checkout
     df = diff
     dc = diff --cached
+    fl = flow
+    # log aliases
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
-    # Show files ignored by git:
-    ign = ls-files -o -i --exclude-standard
-    # Generate GitHub repository changelog in Markdown
+    # generate GitHub repository changelog in Markdown
     # usage: git <alias> first_tag last_tag github_user github_repo
     ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
+    # show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
 [github]
     user = mloskot
