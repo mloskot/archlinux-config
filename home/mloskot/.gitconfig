@@ -8,6 +8,7 @@
     status = auto
 [core]
     excludesfile = /home/mloskot/.gitignore_global
+    editor = gvim --nofork
 [alias]
     # commands shorcuts
     st = status
