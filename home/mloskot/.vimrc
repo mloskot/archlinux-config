@@ -106,5 +106,5 @@ map <C-f> :NERDTreeToggle<CR>
 let g:Tb_MinSize = 1
 let g:Tb_MaxSize=0
 let g:Tb_SplitBelow=0
-let g:Tb_MoreThanOne=0
+"let g:Tb_MoreThanOne=0
 let g:Tb_ModSelTarget=1
