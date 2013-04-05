@@ -100,7 +100,7 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.PAS set filetype=pascal
 
 " NERDTree
-map <C-f> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " TabBar
 let g:Tb_MinSize = 1
