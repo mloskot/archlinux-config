@@ -3,7 +3,7 @@
 "
 " Credits go to:
 "   Vincent Driessen - http://nvie.com/posts/how-i-boosted-my-vim/
-"   Steveosh - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+"   Steve Losh - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   Haridas N - http://haridas.in/vim-as-your-ide.html
 "   Jeffrey Way - http://net.tutsplus.com/sessions/vim-essential-plugins/
 
@@ -34,15 +34,13 @@ set wildmenu " command-line completion enhanced mode
 set wildmode=list:longest
 set lazyredraw
 set mouse=a
-
+if &t_Co > 2 || has("gui_running")
+    " switch syntax highlighting on, when the terminal has colors
+    syntax on
+endif
 if &t_Co >= 256 || has("gui_running")
     colorscheme molokai "wombat murphy
 endif
-if &t_Co > 2 || has("gui_running")
-   " switch syntax highlighting on, when the terminal has colors
-   syntax on
-endif
-
 if has('gui_running')
   set vb t_vb="<ESC>|30f" " Turn off beep
   set guioptions-=T " Hide toolbar
@@ -160,6 +158,7 @@ set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 "   NERDTree {{{
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
+let g:NERDTreeChDirMode=2
 "   }}}
 "   MiniBuffer {{{
 let g:miniBufExplMapWindowNavArrows = 1
