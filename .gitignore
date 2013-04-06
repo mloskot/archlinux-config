@@ -5,6 +5,7 @@
 log-*
 logfile
 home/mloskot/.vim/bundle/
+home/mloskot/bin/ack
 home/mloskot/bin/b2
 home/mloskot/bin/bjam
 home/mloskot/bin/packer
