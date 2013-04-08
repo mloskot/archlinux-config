@@ -43,7 +43,7 @@ ulimit -c unlimited
 I3_CONFIG_HOME=${HOME}/.config/i3
 LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
 # Uncomment to log debugging info
-echo "i3 starting at $(date)" > ${LOGFILE}
+#echo "i3 starting at $(date)" > ${LOGFILE}
 #exec /usr/bin/i3 -V -d all >> ${LOGFILE}
 exec /usr/bin/i3
-echo "i3 started at $(date)" > ${LOGFILE}
+#echo "i3 started at $(date)" > ${LOGFILE}
