@@ -195,8 +195,9 @@ assign [class="HexChat"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
-exec dropboxd
 exec volumeicon
+exec dropboxd
+exec $jabber
 # }}}
 
 # {{{ i3bar
