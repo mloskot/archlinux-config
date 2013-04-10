@@ -94,8 +94,11 @@ if !exists('loaded_taglist')
         elseif executable('tags')
             let Tlist_Ctags_Cmd = 'tags'
         else
-            echomsg 'Taglist: Exuberant ctags (http://ctags.sf.net) ' .
+            " Do not use ctags on Winodws - Mateusz Loskot <mateusz@loskot.net>
+            if !has('win32') && !has('win64')
+                echomsg 'Taglist: Exuberant ctags (http://ctags.sf.net) ' .
                         \ 'not found in PATH. Plugin is not loaded.'
+		    endif
             " Skip loading the plugin
             let loaded_taglist = 'no'
             let &cpo = s:cpo_save
