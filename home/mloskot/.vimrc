@@ -18,6 +18,7 @@
 " 
 filetype off
 execute pathogen#infect()
+execute pathogen#helptags()
 syntax on
 filetype plugin indent on
 set nocompatible
@@ -48,6 +49,8 @@ if &t_Co > 2 || has("gui_running")
 endif
 if &t_Co >= 256 || has("gui_running")
     colorscheme molokai "wombat murphy
+else
+    colorscheme desert
 endif
 if has('gui_running')
   set vb t_vb="<ESC>|30f" " Turn off beep
