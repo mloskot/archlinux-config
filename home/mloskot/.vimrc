@@ -182,4 +182,8 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 "   }}}
+"   clang_complete {{{
+let g:clang_library_path="/usr/lib"
+let g:clang_use_library=1
+"   }}}
 " }}}
