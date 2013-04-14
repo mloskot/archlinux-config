@@ -8,12 +8,12 @@
 "   Jeffrey Way - http://net.tutsplus.com/sessions/vim-essential-plugins/
 
 " Preamble {{{
-	" Windows Compatible {
-		" On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
-		" across (heterogeneous) systems easier. 
-		if has('win32') || has('win64')
-		  set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-		endif
+"   Windows Compatible {{{
+"       On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+"       across (heterogeneous) systems easier. 
+    if has('win32') || has('win64')
+        set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+    endif
 	" }
 " 
 filetype off
@@ -53,10 +53,14 @@ else
     colorscheme desert
 endif
 if has('gui_running')
-  set vb t_vb="<ESC>|30f" " Turn off beep
-  set guioptions-=T " Hide toolbar
-  set guioptions+=m " Show menubar
-  set guifont=Terminus:h12 ""DejaVu Sans Mono"
+    set vb t_vb="<ESC>|30f" " Turn off beep
+    set guioptions-=T " Hide toolbar
+    set guioptions+=m " Show menubar
+    if has('win32') || has('win64')
+        set guifont=Terminus:h12 ""DejaVu Sans Mono"
+    else
+        set guifont=Terminus
+    endif
 endif
 " }}}
 
