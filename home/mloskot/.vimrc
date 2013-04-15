@@ -92,6 +92,10 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 " disable F1 help key to make aiming ESC easier
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
