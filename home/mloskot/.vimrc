@@ -32,7 +32,7 @@ set title
 set visualbell
 set noerrorbells
 set ttyfast
-set number
+set relativenumber "number " always show line numbers
 set showmode
 set showcmd " show (partial) command in status line.
 set ruler " show the cursor position all the time
@@ -92,6 +92,10 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 " disable F1 help key to make aiming ESC easier
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
