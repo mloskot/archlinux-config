@@ -80,6 +80,7 @@ let mapleader = ","
 set backspace=indent,eol,start
 " quick escaping insert mode
 inoremap jj <ESC>
+inoremap <ESC> <nop>
 "   Moving
 "   {{{
 " use jkl; instead of hjkl as ergonomic alternative over historic
@@ -183,6 +184,9 @@ let g:NERDTreeChDirMode=2
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplMapCTabSwitchWindows = 1
+"   }}}
+"   TagBar {{{
+nmap <F11> :TagbarToggle<CR>
 "   }}}
 "   Rainbow Paranthesis {{{
 au VimEnter * RainbowParenthesesToggle
