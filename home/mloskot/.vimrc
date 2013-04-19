@@ -11,11 +11,12 @@
 "   Windows Compatible {{{
 "       On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
 "       across (heterogeneous) systems easier. 
-    if has('win32') || has('win64')
-        set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-    endif
-	" }
-" 
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+" }}}
+"set runtimepath+=/usr/lib/python3.3/site-packages/powerline/bindings/vim
+ 
 filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
