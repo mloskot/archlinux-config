@@ -116,6 +116,8 @@ nnoremap <C-Right> <C-w>l
 "   }}}
 "   Utilities
 "   {{{
+" open file under cursor in vsplit
+nnoremap <F8> :vertical wincmd f<CR>
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " re-hardwrap paragraphs of text
