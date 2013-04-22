@@ -8,13 +8,12 @@
 "   Jeffrey Way - http://net.tutsplus.com/sessions/vim-essential-plugins/
 
 " Preamble {{{
-"   Windows Compatible {{{
-"       On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
-"       across (heterogeneous) systems easier. 
+"  Windows Compatible {{{
+"   On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+"   across (heterogeneous) systems easier. 
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
-
 " On my Arch, Powerline is on by default, but on Debian it is not.
 set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim
 " }}}
