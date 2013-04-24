@@ -192,6 +192,14 @@ nmap <leader>f :FufFileWithCurrentBufferDir<CR>
 nmap <leader>b :FufBuffer<CR>
 nmap <leader>t :FufTaggedFile<CR>
 "   }}}
+"   TabBar {{{
+let g:Tb_MapCTabSwitchBufs = 1
+let g:Tb_MaxSize = 0
+let g:Tb_MoreThanOne=1
+let g:Tb_ModSelTarget = 1
+" Avoid invisible filename for some colorscheme like Molokai
+hi Tb_VisibleNormal guibg=darkblue ctermbg=darkblue termbg=white
+"   }}}
 "   MiniBuffer {{{
 "let g:miniBufExplMapWindowNavArrows = 1
 "let g:miniBufExplMapCTabSwitchBufs = 1
