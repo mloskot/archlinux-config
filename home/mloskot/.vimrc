@@ -183,17 +183,22 @@ set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
 " Plugins {{{
 "   NERDTree {{{
-map <C-n> :NERDTreeToggle<CR>
+map <F11> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
 let g:NERDTreeChDirMode=2
 "   }}}
+"   FuzzyFinder {{{
+nmap <leader>f :FufFileWithCurrentBufferDir<CR>
+nmap <leader>b :FufBuffer<CR>
+nmap <leader>t :FufTaggedFile<CR>
+"   }}}
 "   MiniBuffer {{{
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplMapCTabSwitchWindows = 1
 "   }}}
 "   TagBar {{{
-nmap <F11> :TagbarToggle<CR>
+nmap <F12> :TagbarToggle<CR>
 "   }}}
 "   Rainbow Paranthesis {{{
 au VimEnter * RainbowParenthesesToggle
