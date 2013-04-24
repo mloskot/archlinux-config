@@ -198,7 +198,7 @@ let g:Tb_MaxSize = 0
 let g:Tb_MoreThanOne=1
 let g:Tb_ModSelTarget = 1
 " Avoid invisible filename for some colorscheme like Molokai
-hi Tb_VisibleNormal guibg=darkblue ctermbg=darkblue termbg=white
+hi Tb_VisibleNormal guibg=darkblue ctermbg=darkblue
 "   }}}
 "   MiniBuffer {{{
 "let g:miniBufExplMapWindowNavArrows = 1
