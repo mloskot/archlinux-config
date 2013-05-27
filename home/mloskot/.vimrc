@@ -8,8 +8,19 @@
 "   Jeffrey Way - http://net.tutsplus.com/sessions/vim-essential-plugins/
 
 " Preamble {{{
+"  Windows Compatible {{{
+"   On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+"   across (heterogeneous) systems easier. 
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+" On my Arch, Powerline is on by default, but on Debian it is not.
+set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim
+" }}}
+ 
 filetype off
 execute pathogen#infect()
+execute pathogen#helptags()
 syntax on
 filetype plugin indent on
 set nocompatible
@@ -23,7 +34,7 @@ set title
 set visualbell
 set noerrorbells
 set ttyfast
-set number
+set relativenumber "number " always show line numbers
 set showmode
 set showcmd " show (partial) command in status line.
 set ruler " show the cursor position all the time
@@ -34,18 +45,27 @@ set wildmenu " command-line completion enhanced mode
 set wildmode=list:longest
 set lazyredraw
 set mouse=a
+if &t_Co <256
+    set t_Co=256
+endif
 if &t_Co > 2 || has("gui_running")
     " switch syntax highlighting on, when the terminal has colors
     syntax on
 endif
 if &t_Co >= 256 || has("gui_running")
     colorscheme molokai "wombat murphy
+else
+    colorscheme desert
 endif
 if has('gui_running')
-  set vb t_vb="<ESC>|30f" " Turn off beep
-  set guioptions-=T " Hide toolbar
-  set guioptions+=m " Show menubar
-  set guifont=Terminus ""DejaVu Sans Mono"
+    set vb t_vb="<ESC>|30f" " Turn off beep
+    set guioptions-=T " Hide toolbar
+    set guioptions+=m " Show menubar
+    if has('win32') || has('win64')
+        set guifont=Terminus:h12 ""DejaVu Sans Mono"
+    else
+        set guifont=Terminus
+    endif
 endif
 " }}}
 
@@ -65,6 +85,7 @@ let mapleader = ","
 set backspace=indent,eol,start
 " quick escaping insert mode
 inoremap jj <ESC>
+inoremap <ESC> <nop>
 "   Moving
 "   {{{
 " use jkl; instead of hjkl as ergonomic alternative over historic
@@ -77,6 +98,10 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 " disable F1 help key to make aiming ESC easier
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -96,6 +121,8 @@ nnoremap <C-Right> <C-w>l
 "   }}}
 "   Utilities
 "   {{{
+" open file under cursor in vsplit
+nnoremap <F8> :vertical wincmd f<CR>
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " re-hardwrap paragraphs of text
@@ -156,19 +183,39 @@ set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
 " Plugins {{{
 "   NERDTree {{{
-map <C-n> :NERDTreeToggle<CR>
+map <F11> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
 let g:NERDTreeChDirMode=2
 "   }}}
+"   FuzzyFinder {{{
+nmap <leader>f :FufFileWithCurrentBufferDir<CR>
+nmap <leader>b :FufBuffer<CR>
+nmap <leader>t :FufTaggedFile<CR>
+"   }}}
+"   TabBar {{{
+let g:Tb_MapCTabSwitchBufs = 1
+let g:Tb_MaxSize = 0
+"let g:Tb_MoreThanOne=1
+let g:Tb_ModSelTarget = 1
+" Avoid invisible filename for some colorscheme like Molokai
+hi Tb_VisibleNormal guibg=darkblue ctermbg=darkblue
+"   }}}
 "   MiniBuffer {{{
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplMapCTabSwitchWindows = 1
+"   }}}
+"   TagBar {{{
+nmap <F12> :TagbarToggle<CR>
 "   }}}
 "   Rainbow Paranthesis {{{
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+"   }}}
+"   clang_complete {{{
+let g:clang_library_path="/usr/lib"
+let g:clang_use_library=1
 "   }}}
 " }}}

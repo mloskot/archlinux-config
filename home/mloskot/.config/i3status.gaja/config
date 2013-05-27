@@ -55,7 +55,7 @@ disk "/home" {
 }
 
 time {
-    format = "%H:%M:%S"
+    format = "%Y-%m-%d %H:%M:%S"
 }
 
 load {
