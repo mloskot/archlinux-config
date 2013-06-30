@@ -9,5 +9,6 @@ home/mloskot/.vim/doc/tags
 home/mloskot/bin/ack
 home/mloskot/bin/b2
 home/mloskot/bin/bjam
+home/mloskot/bin/quickbook
 home/mloskot/bin/packer
 home/mloskot/bin/doxygen_xml2qbk
