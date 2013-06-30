@@ -1,0 +1,3 @@
+# Surfraw - Shell Users' Revolutionary Front Against the World Wide Web
+SURFRAW_text_browser=/usr/bin/w3m
+SURFRAW_graphical=0
