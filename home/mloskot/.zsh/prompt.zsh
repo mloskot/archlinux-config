@@ -1,6 +1,6 @@
 #!/bin/zsh
 #
-# ~/.zsh/prompt.zsh - command line prompt theme configuration
+# ~/.zsh/prompt.zsh - prompt theme configuration for Zsh
 #
 # Part of https://github.com/mloskot/archlinux-config
 # Mateusz Loskot <mateusz@loskot.net>

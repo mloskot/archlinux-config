@@ -4,6 +4,9 @@
 # Part of https://github.com/mloskot/archlinux-config
 # Mateusz Loskot <mateusz@loskot.net>
 #
+for zshf in `ls $HOME/.zsh`; do
+    source "$HOME/.zsh/$zshf"
+done
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -13,11 +16,6 @@ bindkey -e
 
 zmodload zsh/complist
 autoload -Uz colors && colors
-
-# prompt
-autoload -Uz promptinit && promptinit
-prompt adam2
-
 
 autoload -Uz compinit && compinit
 
