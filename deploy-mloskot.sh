@@ -1,4 +1,3 @@
-#!/bin/sh
 #
 # dotfiles-mloskot.sh - deploys dotfiles for non-root mloskot user
 #
@@ -94,15 +93,17 @@ echo "Deploying '${TARGET}' dotfiles from ${DOTFILES} to ${HOME}"
 echo
 # ~/bin
 deploy_file bin
-# shell/bash
+# shell
 deploy_file .profile
 deploy_file .bash_aliases
 deploy_file .bash_profile
 deploy_file .bashrc
+deploy_file .zshenv
+deploy_file .zshrc
+deploy_file .zsh
 # Vim
 deploy_file .vim
 deploy_file .vimrc
-deploy_file .gvimrc
 # Git
 deploy_file .gitconfig
 deploy_file .gitignore_global
@@ -124,11 +125,13 @@ deploy_file .config/openbox
 deploy_file .config/volumeicon
 deploy_file .config/tint2
 deploy_file .config/Terminal
-# ~/.kdev4
+# KDE
 deploy_file .kde4/share/config/krusaderrc
 # Misc
 deploy_file .conkyrc
+deploy_file .gemrc
 deploy_file .mcabber
 deploy_file .packer.conf
 deploy_file .wallpapers
+deploy_file .wgetrc
 deploy_file signature.txt
