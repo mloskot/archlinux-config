@@ -12,7 +12,7 @@ general {
         interval = 5
 }
 
-order += "wireless wlan0"
+order += "wireless wlp3s0"
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"
@@ -22,7 +22,7 @@ order += "battery 0"
 order += "time"
 order += "volume master"
 
-wireless wlan0 {
+wireless wlp3s0 {
         format_up = "W: %essid @ %ip (Q: %quality)"
         format_down = "W: down"
 }
