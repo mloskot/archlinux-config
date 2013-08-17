@@ -45,9 +45,6 @@ set wildmenu " command-line completion enhanced mode
 set wildmode=list:longest
 set lazyredraw
 set mouse=a
-if &t_Co <256
-    set t_Co=256
-endif
 if &t_Co > 2 || has("gui_running")
     " switch syntax highlighting on, when the terminal has colors
     syntax on
