@@ -178,9 +178,9 @@ assign [class="Skype"] 1
 # }}}
 
 # {{{ automatically starting applications on i3 startup
+exec volumeicon
 exec dropboxd
 exec $jabber
-#exec $voip
 exec $irc
 # }}}
 
