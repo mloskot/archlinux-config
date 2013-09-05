@@ -9,7 +9,7 @@ if which vim &> /dev/null; then
     if [[ -z $DISPLAY ]] then
         export EDITOR="vim"
     else
-        export EDITOR="gvim"
+        export EDITOR="gvim --nofork"
     fi
     export VIMRELEASE="$(print ${${$(vim --version)[5]}:gs/.//})"
 elif which vi &> /dev/null; then
