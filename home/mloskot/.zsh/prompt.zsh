@@ -6,8 +6,9 @@
 # Part of https://github.com/mloskot/archlinux-config
 # Mateusz Loskot <mateusz@loskot.net>
 #
-autoload -Uz promptinit && promptinit
-prompt adam2
+(( ${+functions[promptinit]} )) || \
+    { fpath=(~/.zsh/prompts $fpath); autoload -Uz promptinit && promptinit }
+prompt adam2mloskot
 
 # Adapted from code found at <https://gist.github.com/1712320>.
 

@@ -44,11 +44,11 @@ use-project boost : /home/mloskot/dev/boost/_svn/trunk ;
 # clang configuration.
 # ------------------
 
-using clang
+#using clang
     : # version
-    3.0
+    3.3
     : # compiler
-    /usr/local/bin/clang++
+    /usr/bin/clang++
     : # options
     <cxxflags>-fPIC
     <cxxflags>-Wno-mismatched-tags
@@ -62,7 +62,7 @@ using clang
 # ------------------
 
 # Configure gcc (default version).
-#using gcc ;
+using gcc ;
 
 # Configure specific gcc version, giving alternative name to use.
 # using gcc : 3.2 : g++-3.2 ;
