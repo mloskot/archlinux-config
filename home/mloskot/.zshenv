@@ -1,9 +1,8 @@
 # Allow disabling of entire environment suite
-[ -n "$INHERIT_ENV" ] && return 0
+[ -n "$INHERIT_ENV" ] && echo "Disabling ~/.zshenv" && return 0
 [[ -o interactive ]] && echo "Sourcing ~/.zshenv"
 
 path=(~/bin ~/.cabal/bin ~/.gem/ruby/2.0.0/bin $path)
-export PATH
 # Only unique entries please.
 typeset -U path
 # TODO: http://zsh.sourceforge.net/Contrib/startup/users/debbiep/dot.zshenv
