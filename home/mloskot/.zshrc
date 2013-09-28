@@ -51,3 +51,5 @@ alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias gits='git status'
 alias gitd='git diff'
+
+emulate sh -c 'source ~/.travis/travis.sh'
