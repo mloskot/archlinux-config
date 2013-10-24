@@ -8,7 +8,16 @@ typeset -U path
 # TODO: http://zsh.sourceforge.net/Contrib/startup/users/debbiep/dot.zshenv
 # Remove entries that don't exist on this system.  Just for sanity's
 # sake more than anything.
-#rationalize-path path
+# rationalize-path path
+
+# Set TERM based on COLORTERM
+case $COLORTERM in
+    xfce4-terminal) export TERM=xterm-color ;;         # this is XFCE Terminal
+    gnome-terminal) export TERM=xterm-color ;;   # this is gnome-terminal
+    wterm-xpm) export TERM=xterm ;;              # this is wterm
+    Eterm) export TERM=Eterm ;;                  # this is Eterm
+    1) export TERM=xterm-color ;;                # this is lxterminal, konsole, yakuake, uxterm, Mac OSX terminal, putty ...
+esac
 
 # Editor
 if which vim &> /dev/null; then
