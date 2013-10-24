@@ -38,31 +38,34 @@
 #
 
 use-project boost : /home/mloskot/dev/boost/_svn/trunk ;
-#use-project boost : /home/mloskot/dev/gil/_svn_review/trunk ;
 
 # ------------------
 # clang configuration.
 # ------------------
 
+# Configure clang (default version).
+using clang ;
+
+# Configure specific clang version, giving alternative name to use.
 #using clang
-    : # version
-    3.3
-    : # compiler
-    /usr/bin/clang++
-    : # options
-    <cxxflags>-fPIC
-    <cxxflags>-Wno-mismatched-tags
-    <cxxflags>-Wno-unused-variable
-    # Workaround
-    <cxxflags>-I/usr/include/x86_64-linux-gnu
-    ;
+#    : # version
+#    3.3
+#    : # compiler
+#    clang++
+#    : # options
+#    <cxxflags>-fPIC
+#    <cxxflags>-Wno-mismatched-tags
+#    <cxxflags>-Wno-unused-variable
+#   # Workaround
+#    <cxxflags>-I/usr/include/x86_64-linux-gnu
+#    ;
 
 # ------------------
 # GCC configuration.
 # ------------------
 
 # Configure gcc (default version).
-using gcc ;
+#using gcc ;
 
 # Configure specific gcc version, giving alternative name to use.
 # using gcc : 3.2 : g++-3.2 ;
@@ -83,9 +86,9 @@ using gcc ;
 
 # Configure specific Python version.
 using python
-    : 3.2
+    : 3.3
     : /usr/bin/python3
-    : /usr/include/python3.2
+    : /usr/include/python3.3m
     : /usr/lib
     ;
 
