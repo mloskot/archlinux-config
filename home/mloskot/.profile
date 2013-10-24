@@ -14,6 +14,15 @@ echo "Sourcing ${HOME}/.profile..."
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# setting TERM based on COLORTERM
+case $COLORTERM in
+    xfce4-terminal) export TERM=xterm-color ;;         # this is XFCE Terminal
+    gnome-terminal) export TERM=xterm-color ;;   # this is gnome-terminal
+    wterm-xpm) export TERM=xterm ;;              # this is wterm
+    Eterm) export TERM=Eterm ;;                  # this is Eterm
+    1) export TERM=xterm-color ;;                # this is lxterminal, konsole, yakuake, uxterm, Mac OSX terminal, putty ...
+esac
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
