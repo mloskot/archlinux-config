@@ -5,6 +5,7 @@
 .netrwhist
 log-*
 logfile
+home/mloskot/.config/gtk-3.0/bookmarks
 home/mloskot/.vim/bundle/
 home/mloskot/.vim/doc/tags
 home/mloskot/bin/ack
@@ -13,3 +14,4 @@ home/mloskot/bin/bjam
 home/mloskot/bin/quickbook
 home/mloskot/bin/packer
 home/mloskot/bin/doxygen_xml2qbk
+home/mloskot/bin/python
