@@ -30,3 +30,5 @@
     ign = ls-files -o -i --exclude-standard
 [github]
     user = mloskot
+[push]
+	default = simple
