@@ -53,3 +53,24 @@ alias gits='git status'
 alias gitd='git diff'
 
 emulate sh -c 'source ~/.travis/travis.sh'
+
+# NOTE: This PATH setting is repeated from ~/.zshenv due to Arch Linux behaviour:
+# "Users should take note that /etc/profile sets the $PATH variable which 
+# will overwrite any $PATH variable set in ~/.zshenv"
+# https://wiki.archlinux.org/index.php/Zsh
+#
+typeset -U path
+path=(~/bin ~/.cabal/bin $path)
+if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then
+    for dir in ~/.gem/ruby/*; do
+        if [[ -d $dir/bin ]]; then
+            path+=($dir/bin)
+        fi
+    done
+fi
+# TODO: http://zsh.sourceforge.net/Contrib/startup/users/debbiep/dot.zshenv
+# Remove entries that don't exist on this system.  Just for sanity's
+# sake more than anything.
+# rationalize-path path
+echo $PATH
+

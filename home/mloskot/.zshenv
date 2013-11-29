@@ -1,10 +1,18 @@
 # Allow disabling of entire environment suite
-[ -n "$INHERIT_ENV" ] && echo "Disabling ~/.zshenv" && return 0
-[[ -o interactive ]] && echo "Sourcing ~/.zshenv"
+#[ -n "$INHERIT_ENV" ] && echo "Disabling ~/.zshenv" && return 0
+#[[ -o interactive ]] && echo "Sourcing ~/.zshenv"
 
-path=(~/bin ~/.cabal/bin ~/.gem/ruby/2.0.0/bin $path)
-# Only unique entries please.
-typeset -U path
+# NOTE: Disabled PATH settings due to Arch behaviour, see comment in ~/.zshrc
+#typeset -U path
+#path=(~/bin ~/.cabal/bin $path)
+#if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then
+#    for dir in ~/.gem/ruby/*; do
+#        if [[ -d $dir/bin ]]; then
+#            path+=($dir/bin)
+#        fi
+#    done
+#fi
+#typeset -U path
 # TODO: http://zsh.sourceforge.net/Contrib/startup/users/debbiep/dot.zshenv
 # Remove entries that don't exist on this system.  Just for sanity's
 # sake more than anything.
