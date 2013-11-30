@@ -72,5 +72,4 @@ fi
 # Remove entries that don't exist on this system.  Just for sanity's
 # sake more than anything.
 # rationalize-path path
-echo $PATH
 
