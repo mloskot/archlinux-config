@@ -17,7 +17,7 @@ usage()
     echo ""
     echo "Usage:"
     echo "$0 TARGET" 
-    echo "   TARGET     Name of target machine: browar, dog or gaja"
+    echo "   TARGET     Name of target machine: browar, dog, gaja or vb"
     echo ""
     echo "Git repository at https://github.com/mloskot/archlinux-config"
 }
@@ -83,6 +83,7 @@ while true; do
         browar) TARGET=browar; break;;
         dog) TARGET=dog; break;;
         gaja) TARGET=gaja; break;;
+        vb) TARGET=vb; break;;
 
         *) usage; exit 0;;
     esac
@@ -116,7 +117,7 @@ deploy_file .config/user-dirs.dirs
 deploy_file .config/user-dirs.locale
 # i3wm
 deploy_file .config/i3.${TARGET} .config/i3
-deploy_file .config/i3status
+deploy_file .config/i3status.${TARGET} .config/i3status
 # GTK+ 2.x
 deploy_file .gtkrc-2.0
 # ~/.config
