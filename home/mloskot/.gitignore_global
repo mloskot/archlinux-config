@@ -36,3 +36,7 @@ cmake_install.cmake
 # KDE
 .directory
 *.kdev4
+
+# Build directories
+_build
+_build.*

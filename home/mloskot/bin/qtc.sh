@@ -1,6 +1,4 @@
 #!/bin/sh
-# Launches Qt Creator for plugins testing and debugging.
-# This executable and arguments are also used in the Run Configuration
-# of a plugin project.
+# Launches Qt Creator for regular use as IDE
 XQTC=$HOME/dev/qt/_git/qt-creator/_build
-${XQTC}/bin/qtcreator -style gtk -color red -settingspath ${XQTC}/.config
+${XQTC}/bin/qtcreator -style gtk
