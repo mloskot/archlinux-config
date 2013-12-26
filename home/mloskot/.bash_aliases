@@ -41,3 +41,6 @@ alias bbwrcom='bash ~/.bbips/bbwrcom'
 alias bbrename='bash ~/.bbips/bbrename'
 alias bbshot='bash ~/.bbips/bbshot'
 alias bbgallery='bash ~/.bbips/bbgallery'
+
+# GnuPG
+alias cryptclip='xsel|gpg -ear mateusz@loskot.net|xsel --clipboard'
