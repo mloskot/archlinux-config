@@ -39,19 +39,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -l'
-alias ls='ls --color=auto'
-alias lsal='ls -al --color'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias gits='git status'
-alias gitd='git diff'
-
+emulate sh -c 'source ~/.aliases'
 emulate sh -c 'source ~/.travis/travis.sh'
 
 # NOTE: This PATH setting is repeated from ~/.zshenv due to Arch Linux behaviour:

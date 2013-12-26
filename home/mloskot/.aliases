@@ -4,18 +4,30 @@
 # Part of https://github.com/mloskot/archlinux-config
 # Mateusz Loskot <mateusz@loskot.net>
 #
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -l'
+alias ls='ls --color=auto'
+alias lsal='ls -al --color'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias gits='git status'
+alias gitd='git diff'
 # packer
 alias pa="packer -S --auronly"
 alias pann="packer -S --auronly --noconfirm --noedit"
 alias payu="packer -Syu --auronly"
-
 # sql*plus
 alias rlrman="rlwrap rman"
 alias rlsqlplus="rlwrap sqlplus"
-
+# GnuPG
+alias clipenc="xsel|gpg -ear mateusz@loskot.net|xsel -b"
+alias clipdec="xsel -b|gpg -d|xsel -b && xsel -b"
 # Skype
 #alias skype='LD_PRELOAD=/usr/libxx/libv4l/v4l1compat.so skype'
-
 # Bash Batch Image Processing Scripts 
 # http://sourceforge.net/projects/bbips/
 alias bbapcom='bash ~/.bbips/bbapcom'
@@ -41,6 +53,3 @@ alias bbwrcom='bash ~/.bbips/bbwrcom'
 alias bbrename='bash ~/.bbips/bbrename'
 alias bbshot='bash ~/.bbips/bbshot'
 alias bbgallery='bash ~/.bbips/bbgallery'
-
-# GnuPG
-alias cryptclip='xsel|gpg -ear mateusz@loskot.net|xsel --clipboard'
