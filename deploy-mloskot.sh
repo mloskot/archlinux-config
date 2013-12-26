@@ -96,7 +96,7 @@ echo
 deploy_file bin
 # shell
 deploy_file .profile
-deploy_file .bash_aliases
+deploy_file .aliases
 deploy_file .bash_profile
 deploy_file .bashrc
 deploy_file .zshenv
