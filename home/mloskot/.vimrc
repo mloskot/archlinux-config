@@ -17,7 +17,7 @@ endif
 " On my Arch, Powerline is on by default, but on Debian it is not.
 set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim
 " }}}
- 
+
 filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
@@ -50,7 +50,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
 endif
 if &t_Co >= 256 || has("gui_running")
-    colorscheme molokai "wombat murphy
+    colorscheme desert "molokai "wombat murphy
 else
     colorscheme desert
 endif
@@ -106,6 +106,8 @@ vnoremap <F1> <ESC>
 "   }}}
 "   Splits
 "   {{{
+" close split
+nnoremap <leader>q <C-w>q
 " open new vertical split and switch to it
 nnoremap <leader>v <C-w>v<C-w>l
 " open new horizontal split and switch to it
@@ -115,6 +117,10 @@ nnoremap <C-Left>  <C-w>h
 nnoremap <C-Down>  <C-w>j
 nnoremap <C-Up>    <C-w>k
 nnoremap <C-Right> <C-w>l
+nnoremap <C-j>  <C-w>h
+nnoremap <C-k>  <C-w>j
+nnoremap <C-l>    <C-w>k
+nnoremap <C-;> <C-w>l
 "   }}}
 "   Utilities
 "   {{{
@@ -123,7 +129,7 @@ nnoremap <F8> :vertical wincmd f<CR>
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " re-hardwrap paragraphs of text
-nnoremap <leader>q gqip
+nnoremap <leader>rw gqip
 " ,ft mapped to a fold tag function:
 nnoremap <leader>ft Vatzf
 " bring Ack ready to search - https://github.com/mileszs/ack.vim
@@ -166,6 +172,7 @@ set formatoptions=qrn1
 set colorcolumn=85
 " folding
 set foldmethod=indent " syntex
+set foldlevel=99
 " indentation
 set cindent
 " tab key
@@ -185,9 +192,9 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
 let g:NERDTreeChDirMode=2
 "   }}}
 "   FuzzyFinder {{{
-nmap <leader>f :FufFileWithCurrentBufferDir<CR>
-nmap <leader>b :FufBuffer<CR>
-nmap <leader>t :FufTaggedFile<CR>
+nmap <leader>f  :FufFileWithCurrentBufferDir<CR>
+nmap <leader>fb :FufBuffer<CR>
+nmap <leader>ft :FufTaggedFile<CR>
 "   }}}
 "   TabBar {{{
 let g:Tb_MapCTabSwitchBufs = 1
@@ -206,10 +213,10 @@ hi Tb_VisibleNormal guibg=darkblue ctermbg=darkblue
 nmap <F12> :TagbarToggle<CR>
 "   }}}
 "   Rainbow Paranthesis {{{
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 "   }}}
 "   clang_complete {{{
 let g:clang_library_path="/usr/lib"
