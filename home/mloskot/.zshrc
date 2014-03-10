@@ -61,3 +61,6 @@ fi
 # sake more than anything.
 # rationalize-path path
 
+
+# added by travis gem
+[ -f /home/mloskot/.travis/travis.sh ] && source /home/mloskot/.travis/travis.sh
