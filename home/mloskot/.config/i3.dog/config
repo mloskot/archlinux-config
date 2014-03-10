@@ -198,7 +198,6 @@ assign [class="HexChat"] 1
 exec volumeicon
 exec dropboxd
 exec $jabber
-exec $irc
 # }}}
 
 # {{{ i3bar
