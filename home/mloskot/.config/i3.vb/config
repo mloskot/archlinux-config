@@ -11,8 +11,7 @@
 set $mod Mod4
 
 # default applications
-#set $term i3-sensible-terminal
-set $term xfce4-terminal 
+set $term i3-sensible-terminal
 set $browser firefox
 set $mua chromium
 set $fm krusader
