@@ -11,10 +11,11 @@ alias ls='ls --color=auto'
 alias lsal='ls -al --color'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
+GREP_OPTIONS="--color=auto"
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 alias egrep='/usr/bin/egrep $GREP_OPTIONS'
-unset GREP_OPTIONS
 alias fgrep='/usr/bin/fgrep $GREP_OPTIONS'
+unset GREP_OPTIONS
 alias gits='git status'
 alias gitd='git diff'
 # packer

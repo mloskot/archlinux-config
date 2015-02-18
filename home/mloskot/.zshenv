@@ -42,10 +42,6 @@ export VISUAL=$EDITOR
 
 export SVN_EDITOR="$EDITOR"
 
-if echo hello|grep --color=auto l >/dev/null 2>&1; then
-  export GREP_OPTIONS='--color=auto'
-fi
-
 # Browser
 export WWW_HOME=http://google.com
 if [[ -z $DISPLAY ]] then

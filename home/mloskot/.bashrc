@@ -113,9 +113,6 @@ PS2='> '
 PS3='> '
 PS4='+ '
 
-if echo hello|grep --color=auto l >/dev/null 2>&1; then
-  export GREP_OPTIONS='--color=auto'
-fi
 # }}}
 
 # {{{ Aliases
@@ -188,4 +185,6 @@ unset use_color safe_term match_lhs
 # }}}
 
 # added by travis gem
-source /home/mloskot/.travis/travis.sh
+if [ -f /home/mloskot/.travis/travis.sh ]; then
+    source /home/mloskot/.travis/travis.sh
+fi
