@@ -29,20 +29,27 @@ unset LC_COLLATE
 # Use XToolkit in java applications
 export AWT_TOOLKIT=XToolkit
 
-# Set background color
-#xsetroot -solid "#333333"
-
-# set background wallpaper
-sh ~/.fehbg &
+# Set background color or wallpaper
+if type feh >/dev/null 2>&1; then
+    sh ~/.fehbg &
+else
+    xsetroot -solid "#333333"
+fi
 
 # Enable core dumps in case something goes wrong
 ulimit -c unlimited
 
+# Start the VirtualBox X Window System guest services
+VBoxClient-all &
+
 # Start i3 and log
 I3_CONFIG_HOME=${HOME}/.config/i3
-LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
 # Uncomment to log debugging info
-#echo "i3 starting at $(date)" > ${LOGFILE}
-#exec /usr/bin/i3 -V -d all >> ${LOGFILE}
-exec /usr/bin/i3
-#echo "i3 started at $(date)" > ${LOGFILE}
+#LOGFILE=${I3_CONFIG_HOME}/log-$(date +'%F-%k-%M-%S')
+if [ ! -z "$LOGFILE" ]; then
+   echo "i3 starting at $(date)" > ${LOGFILE}
+   exec /usr/bin/i3 -V -d all >> ${LOGFILE}
+   echo "i3 started at $(date)" > ${LOGFILE}
+else
+   exec /usr/bin/i3
+fi
