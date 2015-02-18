@@ -40,7 +40,7 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 
 emulate sh -c 'source ~/.aliases'
-emulate sh -c 'source ~/.travis/travis.sh'
+[ -f ~/.travis/travis.sh ] && emulate sh -c 'source ~/.travis/travis.sh'
 
 # NOTE: This PATH setting is repeated from ~/.zshenv due to Arch Linux behaviour:
 # "Users should take note that /etc/profile sets the $PATH variable which 
@@ -61,6 +61,3 @@ fi
 # sake more than anything.
 # rationalize-path path
 
-
-# added by travis gem
-[ -f /home/mloskot/.travis/travis.sh ] && source /home/mloskot/.travis/travis.sh
