@@ -130,6 +130,7 @@ deploy_file .config/Terminal
 deploy_file .kde4/share/config/krusaderrc
 # Misc
 deploy_file .conkyrc
+deploy_file .fehbg
 deploy_file .gemrc
 deploy_file .mcabber
 deploy_file .packer.conf
