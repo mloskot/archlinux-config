@@ -123,7 +123,7 @@ deploy_file .gtkrc-2.0
 # ~/.config
 deploy_file .config/gtk-3.0
 deploy_file .config/openbox
-deploy_file .config/volumeicon
+deploy_file .config/volumeicon.${TARGET} .config/volumeicon
 deploy_file .config/tint2
 deploy_file .config/Terminal
 # KDE
