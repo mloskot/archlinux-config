@@ -6,9 +6,12 @@
     branch = auto
     diff = auto
     status = auto
+	ui = auto
 [core]
     excludesfile = /home/mloskot/.gitignore_global
     editor = gvim --nofork
+	autocrlf = input
+	pager = less -FRSX
 [alias]
     # commands shorcuts
     st = status
@@ -32,3 +35,10 @@
     user = mloskot
 [push]
 	default = simple
+[status]
+	showuntrackedfiles = all
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	stat = true
