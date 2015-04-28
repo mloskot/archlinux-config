@@ -1,4 +1,5 @@
 #!/bin/sh
+source ${HOME}/bin/qt-dev-env.sh
 date > LOG
-$HOME/dev/qt/_git/qt5/qtbase/bin/qmake -r $HOME/dev/qt/_git/qt-creator && make -j4
+${QT5_GIT}/qtbase/bin/qmake -r ${QTC_GIT} && make -j4
 date >> LOG
