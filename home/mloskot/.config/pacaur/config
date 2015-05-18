@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#
+# ~/.config/pacaur/config
+#
+
+# The following options are commented out with their default values listed.
+# If you wish to use different values, uncomment and update the values.
+# The Color and VerbosePkgLists options can be enabled in /etc/pacman.conf.
+#builddir="${BUILDDIR:-$tmpdir}"       # build directory
+editor="${EDITOR:-vim}"                # PKGBUILD editor
+#editpkgbuild=true                     # edit PKGBUILD script
+#editinstall=true                      # edit install script
+#fallback=true                         # pacman fallback to the AUR
+#clean=true                            # clean up after package install
+#cleandevel=true                       # clean up devel package
+#sortbyvotes=true                      # sort search results by votes
+#sudoloop=false                        # prevent sudo timeout
