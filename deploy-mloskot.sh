@@ -134,6 +134,7 @@ deploy_file .fehbg
 deploy_file .gemrc
 deploy_file .mcabber
 deploy_file .packer.conf
+deploy_file .config/pacaur
 deploy_file .wallpapers
 deploy_file .wgetrc
 deploy_file signature.txt
