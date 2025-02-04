@@ -1,5 +1,10 @@
 # Linux Setup
 
+> [!IMPORTANT]
+> I've been mostly working in hybrid environments for which I maintain my configs in https://github.com/mloskot/dotfiles repository.
+> I no longer use plain Arch on my computers and this repo has not received updates for very long time.
+> It's gone archived mode.
+
 https://github.com/mloskot/linux-config
 
 Collection of user dotfiles and system configuration files for 
